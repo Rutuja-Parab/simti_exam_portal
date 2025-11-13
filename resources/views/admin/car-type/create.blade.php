@@ -1,7 +1,6 @@
 @extends('admin.layout.app')
 
 @section('content')
-
     <div class="container-fluid">
         <section class="content">
             <figure>
@@ -22,7 +21,7 @@
                         <div class="mt-3">
                             <button type="button" onclick="createAndUpdateButton()" class="btn btn-success">Kaydet
                             </button>
-                            <a href="{{route('admin.car-type.index')}}" class="btn btn-danger">İptal</a>
+                            <a href="{{ route('admin.car-type.index') }}" class="btn btn-danger">İptal</a>
                         </div>
 
                     </form>
@@ -30,7 +29,6 @@
             </div>
         </section>
     </div>
-
 @endsection
 
 @section('meta')
@@ -43,8 +41,10 @@
 
 @section('js')
     <script>
-        const actionUrl = '{{route('admin.car-type.store')}}';
-        const backUrl = '{{route('admin.car-type.index')}}';
+        // Form verilerinin gönderileceği URL
+        const actionUrl = '{{ route('admin.car-type.store') }}';
+        // Kullanıcıyı geri yönlendirecek URL
+        const backUrl = '{{ route('admin.car-type.index') }}';
     </script>
     @include('partials.script')
 @endsection

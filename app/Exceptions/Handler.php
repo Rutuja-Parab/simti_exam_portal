@@ -43,7 +43,7 @@ class Handler extends ExceptionHandler
                     'code' => $e->getCode(),
                 ],
             ])->concat(collect($e->getTrace())->take(5))->toArray();
-            Log::channel('slack')->error($e->getMessage(), $errorLog);
+            Log::channel('stack')->error($e->getMessage(), $errorLog);
         });
     }
 }
