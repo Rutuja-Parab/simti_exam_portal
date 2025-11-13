@@ -69,7 +69,7 @@
                                 <td>{{$test->test_question_count}}</td>
                                 <td>{{examTime($test->test_question_count)}}</td>
                                 <th>{{$test->point}}</th>
-                                <td class="{{resultStatus($test->point) == 'Başarılı' ? 'text-success' : 'text-danger'}} fw-bold">{{resultStatus($test->point)}}</td>
+                                <td class="{{resultStatus($test->point) == 'Passed' ? 'text-success' : 'text-danger'}} fw-bold">{{resultStatus($test->point)}}</td>
                                 <td>
                                     <a href="{{route('user.result.detail',$test->id)}}" class="btn btn-success">{{__('user/my-exam-result.exam_detail_btn')}}</a>
                                 </td>

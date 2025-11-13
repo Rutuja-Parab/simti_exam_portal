@@ -40,7 +40,7 @@
                             </div>
                         @endif
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="title" placeholder="Başlık"
+                            <input type="text" class="form-control" name="title" placeholder="Title"
                                    value="{{$question->title}}">
                             <label for="floatingFirst">{{__('manager/question/question-add-edit.question')}}</label>
                         </div>
@@ -81,7 +81,7 @@
                             <div class="row mb-3 text-choice">
                                 <div class="form-floating ps-1 col-10 col-md-10">
                                     <input type="text" class="form-control " name="{{$choice->id}}"
-                                           placeholder="Cevap 0{{$key + 1}}"
+                                           placeholder="Answer 0{{$key + 1}}"
                                            value="{{$choice->title}}">
                                     <label class=""
                                            for="floatingFirst">{{__('manager/question/question-add-edit.choice_input')}}
@@ -136,7 +136,7 @@
 @endsection
 
 @section('meta')
-    <title>Soru Düzenle</title>
+    <title>{{__('manager/menu.question_edit')}}</title>
 @endsection
 
 @section('css')

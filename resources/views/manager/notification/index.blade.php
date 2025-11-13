@@ -27,7 +27,7 @@
                         @foreach($notifications as $notification)
                             <tr>
                                 <td>{{$notification->message}}</td>
-                                <td class="{{$notification->status == 0 ? 'text-warning' : 'text-success'}} fw-bold">{{$notification->status == 0 ? 'Gönderiliyor' : 'Gönderildi'}}</td>
+                                <td class="{{$notification->status == 0 ? 'text-warning' : 'text-success'}} fw-bold">{{$notification->status == 0 ? 'Sending' : 'Sent'}}</td>
                                 <td>{{$notification->created_at}}</td>
                             </tr>
                         @endforeach

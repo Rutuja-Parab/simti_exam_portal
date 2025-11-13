@@ -6,7 +6,7 @@
         <section class="content">
             <figure>
                 <blockquote class="blockquote">
-                    <h2>Soru Düzenle</h2>
+                    <h2>Edit Question</h2>
                 </blockquote>
             </figure>
             <div class="row">
@@ -21,13 +21,13 @@
                                         value="{{$language->id}}" {{$question->language->id == $language->id ? 'selected' : null}}>{{$language->title}}</option>
                                 @endforeach
                             </select>
-                            <label for="floatingSelect">Soru Dilini Seçin</label>
+                            <label for="floatingSelect">Select Question Language</label>
                         </div>
 
                         <div class="form-check form-switch">
                             <input class="form-check-input" type="checkbox" name="questionImage"
                                    {{$question->questionImage == 1 ? 'checked' : null}} id="switchQuestionImageShow">
-                            <label class="form-check-label" for="switchQuestionImageShow">Soru Resim</label>
+                            <label class="form-check-label" for="switchQuestionImageShow">Question Image</label>
                         </div>
 
                         <br>
@@ -36,18 +36,18 @@
                             <img src="{{imagePath($question->imagePath)}}" height="100" class="mb-3 w-auto" alt="">
                         @endif
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="title" placeholder="Başlık"
+                            <input type="text" class="form-control" name="title" placeholder="Title"
                                    value="{{$question->title}}">
-                            <label for="floatingFirst">Soru</label>
+                            <label for="floatingFirst">Question</label>
                         </div>
 
                         <div class="input-group mb-3 d-none question-image">
                             <input type="file" class="form-control" name="imagePath">
-                            <label class="input-group-text" for="inputGroupFile02">Soru Resim</label>
+                            <label class="input-group-text" for="inputGroupFile02">Question Image</label>
                         </div>
 
                         <div class="mb-3">
-                            <label class="mb-2">Açıklama</label>
+                            <label class="mb-2">Description</label>
                             <textarea id="ckeditor" name="description">{!! $question->description !!}</textarea>
                             <input type="hidden" name="ck_editor" value="1">
                         </div>
@@ -59,13 +59,13 @@
                                         value="{{$type->id}}" {{$question->typeId == $type->id ? 'selected' : null}}>{{$type->title}}</option>
                                 @endforeach
                             </select>
-                            <label for="floatingSelect">Soru Tipi</label>
+                            <label for="floatingSelect">Question Type</label>
                         </div>
 
                         <div class="form-check form-switch">
                             <input class="form-check-input" type="checkbox" name="choiceImage"
                                    {{$question->choiceImage == 1 ? 'checked' : null}} id="switchImageShow">
-                            <label class="form-check-label" for="switchImageShow">Cevap Resim</label>
+                            <label class="form-check-label" for="switchImageShow">Choice Image</label>
                         </div>
 
                         <br>
@@ -75,9 +75,9 @@
                             <div class="row mb-3 text-choice">
                                 <div class="form-floating ps-1 col-10 col-md-10">
                                     <input type="text" class="form-control " name="{{$choice->id}}"
-                                           placeholder="Cevap 0{{$key + 1}}"
+                                           placeholder="Answer 0{{$key + 1}}"
                                            value="{{$choice->title}}">
-                                    <label class="" for="floatingFirst">Cevap 0{{$key + 1}}</label>
+                                    <label class="" for="floatingFirst">Answer 0{{$key + 1}}</label>
                                 </div>
                                 <div class="col-2 col-md-1">
                                     <input class="form-check-input p-3" type="checkbox" id="flexCheckDefault"
@@ -88,7 +88,7 @@
                                            name="correct_choice"
                                            value="{{$choice->id}}"
                                            onclick="correctChoice(this)"
-                                           title="Doğru Cevabı Seçin">
+                                           title="Select Correct Answer">
                                 </div>
                             </div>
                             <!-- image choice -->
@@ -109,15 +109,15 @@
                                            @if($choice->path != null)
                                                {{$choice->id == $choice->choiceKey->choiceId ? 'checked' : null}}
                                            @endif
-                                           title="Doğru Cevabı Seçin">
+                                           title="Select Correct Answer">
                                 </div>
                             </div>
                         @endforeach
 
                         <div class="mt-3">
-                            <button type="button" onclick="createAndUpdateButton()" class="btn btn-success">Kaydet
+                            <button type="button" onclick="createAndUpdateButton()" class="btn btn-success">Save
                             </button>
-                            <a href="{{route('admin.question.index')}}" class="btn btn-danger">İptal</a>
+                            <a href="{{route('admin.question.index')}}" class="btn btn-danger">Cancel</a>
                         </div>
 
                     </form>
@@ -129,7 +129,7 @@
 @endsection
 
 @section('meta')
-    <title>Soru Düzenle</title>
+    <title>Edit Question</title>
 @endsection
 
 @section('css')

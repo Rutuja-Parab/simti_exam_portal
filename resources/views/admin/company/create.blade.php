@@ -6,7 +6,7 @@
         <section class="content">
             <figure>
                 <blockquote class="blockquote">
-                    <h2>Şirket Oluştur</h2>
+                    <h2>Create Company</h2>
                 </blockquote>
             </figure>
             <div class="row">
@@ -17,8 +17,8 @@
                         <div class="row">
                             <div class="col-md-6 col-sm-12">
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" name="title" placeholder="Şirket Adı">
-                                    <label for="floatingFirst">Şirket Adı</label>
+                                    <input type="text" class="form-control" name="title" placeholder="Company Name">
+                                    <label for="floatingFirst">Company Name</label>
                                 </div>
 
                                 <div class="form-floating mb-3">
@@ -28,8 +28,8 @@
 
                                 <div class="form-floating mb-3">
                                     <input type="text" class="form-control" name="tax_no" maxlength="11"
-                                           placeholder="Vergi No">
-                                    <label for="floatingFirst">Vergi No</label>
+                                           placeholder="Tax Number">
+                                    <label for="floatingFirst">Tax Number</label>
                                 </div>
 
                                 <div class="form-floating mb-3">
@@ -38,24 +38,24 @@
                                 </div>
 
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" name="website_url" placeholder="Web Site">
-                                    <label for="floatingFirst">Web Site</label>
+                                    <input type="text" class="form-control" name="website_url" placeholder="Website">
+                                    <label for="floatingFirst">Website</label>
                                 </div>
 
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" name="phone" placeholder="Telefon">
-                                    <label for="floatingFirst">Telefon</label>
+                                    <input type="text" class="form-control" name="phone" placeholder="Phone">
+                                    <label for="floatingFirst">Phone</label>
                                 </div>
 
                                 <div class="form-floating mb-3">
                                     <select class="form-select" onchange="countryChange()" id="country"
                                             name="countryId">
-                                        <option disabled selected>Seçiniz</option>
+                                        <option disabled selected>Select</option>
                                         @foreach($countries as $country)
                                             <option value="{{$country->id}}">{{$country->title}}</option>
                                         @endforeach
                                     </select>
-                                    <label for="floatingSelect">Ülke</label>
+                                    <label for="floatingSelect">Country</label>
                                 </div>
 
                             </div>
@@ -64,42 +64,42 @@
 
                                 <div class="form-floating mb-3">
                                     <select class="form-select" onchange="cityChange()" id="city" name="cityId">
-                                        <option disabled selected>Seçiniz</option>
+                                        <option disabled selected>Select</option>
                                     </select>
-                                    <label for="floatingSelect">İl</label>
+                                    <label for="floatingSelect">Province</label>
                                 </div>
 
                                 <div class="form-floating mb-3">
                                     <select class="form-select" name="stateId" id="state">
-                                        <option disabled selected>Seçiniz</option>
+                                        <option disabled selected>Select</option>
                                     </select>
-                                    <label for="floatingSelect">İlçe</label>
+                                    <label for="floatingSelect">District</label>
                                 </div>
 
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" name="address" placeholder="Adres">
-                                    <label for="floatingFirst">Adres</label>
+                                    <input type="text" class="form-control" name="address" placeholder="Address">
+                                    <label for="floatingFirst">Address</label>
                                 </div>
 
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" name="zip_code" placeholder="Posta Kodu">
-                                    <label for="floatingFirst">Posta Kodu</label>
+                                    <input type="text" class="form-control" name="zip_code" placeholder="Postal Code">
+                                    <label for="floatingFirst">Postal Code</label>
                                 </div>
 
                                 <div class="form-floating mb-3">
                                     <select class="form-select" name="planId">
-                                        <option disabled selected>Seçiniz</option>
+                                        <option disabled selected>Select</option>
                                         @foreach($paymentPlans as $paymentPlan)
                                             <option value="{{$paymentPlan->id}}">{{$paymentPlan->description}}</option>
                                         @endforeach
                                     </select>
-                                    <label for="floatingSelect">Ödeme Planı</label>
+                                    <label for="floatingSelect">Payment Plan</label>
                                 </div>
 
                                 <div class="form-floating mb-3">
                                     <input type="date" class="form-control" name="start_date"
-                                           placeholder="Başlangıç Tarihi">
-                                    <label for="floatingFirst">Başlangıç Tarihi</label>
+                                           placeholder="Start Date">
+                                    <label for="floatingFirst">Start Date</label>
                                 </div>
 
                                 <div class="input-group mb-3">
@@ -110,9 +110,9 @@
                         </div>
 
                         <div class="mt-3">
-                            <button type="button" onclick="createAndUpdateButton()" class="btn btn-success">Kaydet
+                            <button type="button" onclick="createAndUpdateButton()" class="btn btn-success">Save
                             </button>
-                            <a href="{{route('admin.company.index')}}" class="btn btn-danger">İptal</a>
+                            <a href="{{route('admin.company.index')}}" class="btn btn-danger">Cancel</a>
                         </div>
 
                     </form>
@@ -124,7 +124,7 @@
 @endsection
 
 @section('meta')
-    <title>Şirket Oluştur</title>
+    <title>Create Company</title>
 @endsection
 
 @section('css')

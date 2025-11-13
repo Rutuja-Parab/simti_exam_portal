@@ -6,21 +6,21 @@
         <section class="content">
             <figure>
                 <blockquote class="blockquote">
-                    <h2>Diller</h2>
+                    <h2>Languages</h2>
                 </blockquote>
             </figure>
 
             <div class="row">
                 <div class="col-12 col-lg-12">
-                    <h4><a href="{{route('admin.language.create')}}" class="btn btn-success">Dil Oluştur</a></h4>
+                    <h4><a href="{{route('admin.language.create')}}" class="btn btn-success">Create Language</a></h4>
                 </div>
                 <div class="col-12 col-lg-12 mt-3 overflow-auto">
                     <table id="data-table" class="table table-striped" style="width:100%">
                         <thead>
                         <tr>
-                            <th>Kodu</th>
-                            <th>Adı</th>
-                            <th>İşlemler</th>
+                            <th>Code</th>
+                            <th>Name</th>
+                            <th>Actions</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -50,7 +50,7 @@
 @endsection
 
 @section('meta')
-    <title>Diller</title>
+    <title>Languages</title>
 @endsection
 
 @section('css')

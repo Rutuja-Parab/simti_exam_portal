@@ -107,7 +107,7 @@
                             <td>{{$result->in_correct}}</td>
                             <td>{{$result->blank_question}}</td>
                             <td>{{$result->point}}</td>
-                            <th class="{{resultStatus($result->point) == 'Başarılı' ? 'text-success' : 'text-danger'}}">{{resultStatus($result->point)}}</th>
+                            <th class="{{resultStatus($result->point) == 'Passed' ? 'text-success' : 'text-danger'}}">{{resultStatus($result->point)}}</th>
                         </tr>
                     @endforeach
                     </tbody>

@@ -5,7 +5,7 @@
         <section class="content">
             <figure>
                 <blockquote class="blockquote">
-                    <h2>Sınav Sonuç Detay</h2>
+                    <h2>Exam Result Details</h2>
                 </blockquote>
             </figure>
             <div class="container">
@@ -13,20 +13,20 @@
                     <div class="col-md-6 mb-2">
                         <div class="col-md-12 p-2">
                             <div class="p-3 border bg-light rounded-3">
-                                <small>Toplam Soru Sayısı</small>
+                                <small>Total Questions</small>
                                 <h4>{{$result->total_question}}</h4>
                             </div>
                         </div>
                         <div class="col-md-12 mt-1 p-2">
                             <div class="p-3 border bg-light rounded-3">
-                                <small>Sınav Puanı</small>
+                                <small>Exam Score</small>
                                 <h4>{{$result->point}}</h4>
                             </div>
                         </div>
                         <div class="col-md-12 mt-1 p-2">
                             <div class="p-3 border bg-light rounded-3">
-                                <small>Sonuç</small>
-                                <h4 class="{{resultStatus($result->point) == 'Başarılı' ? 'text-success' : 'text-danger'}}">{{resultStatus($result->point)}}</h4>
+                                <small>Result</small>
+                                <h4 class="{{resultStatus($result->point) == 'Passed' ? 'text-success' : 'text-danger'}}">{{resultStatus($result->point)}}</h4>
                             </div>
                         </div>
                     </div>
@@ -53,11 +53,11 @@
                                      role="tabpanel"
                                      aria-labelledby="type-{{$test->id}}">
                                     <ul class="list-group list-group-flush">
-                                        <li class="list-group-item bg-light">Soru Sayısı
+                                        <li class="list-group-item bg-light">Question Count
                                             : {{$test->total_question}}</li>
-                                        <li class="list-group-item bg-light">Doğru Sayısı : {{$test->correct}}</li>
-                                        <li class="list-group-item bg-light">Yanlış Sayısı : {{$test->in_correct}}</li>
-                                        <li class="list-group-item bg-light">Boş Sayısı : {{$test->blank_question}}</li>
+                                        <li class="list-group-item bg-light">Correct Answers : {{$test->correct}}</li>
+                                        <li class="list-group-item bg-light">Incorrect Answers : {{$test->in_correct}}</li>
+                                        <li class="list-group-item bg-light">Blank Answers : {{$test->blank_question}}</li>
                                     </ul>
                                 </div>
                             @endforeach
@@ -84,7 +84,7 @@
 @endsection
 
 @section('meta')
-    <title>Sınav Sonuç Detay</title>
+    <title>Exam Result Details</title>
 @endsection
 
 @section('css')
@@ -99,9 +99,9 @@
             type: 'doughnut',
             data: {
                 labels: [
-                        'Doğru',
-                        'Yanlış',
-                        'Boş'
+                        'Correct',
+                        'Incorrect',
+                        'Blank'
                 ],
                 datasets: [{
                     label: 'My First Dataset',

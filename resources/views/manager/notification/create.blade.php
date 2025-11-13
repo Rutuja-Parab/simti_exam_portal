@@ -30,7 +30,7 @@
                         <br>
 
                         <div class="form-floating">
-                                <textarea class="form-control h-100" placeholder="Bildirim Mesajı" name="message" id="floatingTextarea2"></textarea>
+                                <textarea class="form-control h-100" placeholder="Notification Message" name="message" id="floatingTextarea2"></textarea>
                             <label for="floatingTextarea2">{{__('manager/notification.message')}}</label>
                         </div>
 

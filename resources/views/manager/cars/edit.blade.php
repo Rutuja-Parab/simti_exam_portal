@@ -15,7 +15,7 @@
                         @csrf
                         @method('PUT')
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="plate_code" placeholder="Araç Plaka"
+                            <input type="text" class="form-control" name="plate_code" placeholder="Vehicle Plate"
                                    value="{{$car->plate_code}}">
                             <label for="floatingFirst">{{__('manager/car-appointment/car.plate_code')}}</label>
                         </div>

@@ -6,7 +6,7 @@
         <section class="content">
             <figure>
                 <blockquote class="blockquote">
-                    <h2>Ödeme Planı Oluştur</h2>
+                    <h2>Create Payment Plan</h2>
                 </blockquote>
             </figure>
             <div class="row">
@@ -20,14 +20,14 @@
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="description" placeholder="Açıklama">
-                            <label for="floatingFirst">Açıklama</label>
+                            <input type="text" class="form-control" name="description" placeholder="Description">
+                            <label for="floatingFirst">Description</label>
                         </div>
 
                         <div class="mt-3">
-                            <button type="button" onclick="createAndUpdateButton()" class="btn btn-success">Kaydet
+                            <button type="button" onclick="createAndUpdateButton()" class="btn btn-success">Save
                             </button>
-                            <a href="{{route('admin.payment-plan.index')}}" class="btn btn-danger">İptal</a>
+                            <a href="{{route('admin.payment-plan.index')}}" class="btn btn-danger">Cancel</a>
                         </div>
 
                     </form>
@@ -39,7 +39,7 @@
 @endsection
 
 @section('meta')
-    <title>Ödeme Planı Oluştur</title>
+    <title>Create Payment Plan</title>
 @endsection
 
 @section('css')

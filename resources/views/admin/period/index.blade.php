@@ -6,19 +6,19 @@
         <section class="content">
             <figure>
                 <blockquote class="blockquote">
-                    <h2>Dönemler</h2>
+                    <h2>Periods</h2>
                 </blockquote>
             </figure>
             <div class="row">
                 <div class="col-12 col-lg-12">
-                    <h4><a href="{{route('admin.period.create')}}" class="btn btn-success">Dönem Oluştur</a></h4>
+                    <h4><a href="{{route('admin.period.create')}}" class="btn btn-success">Create Period</a></h4>
                 </div>
                 <div class="col-12 col-lg-12 mt-3 overflow-auto">
                     <table id="data-table" class="table table-striped" style="width:100%">
                         <thead>
                         <tr>
-                            <th>Dönem</th>
-                            <th>İşlemler</th>
+                            <th>Period</th>
+                            <th>Actions</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -46,7 +46,7 @@
 @endsection
 
 @section('meta')
-    <title>Dönemler</title>
+    <title>Periods</title>
 @endsection
 
 @section('css')

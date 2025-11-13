@@ -21,37 +21,37 @@
                            </div>
 
                            <div class="form-floating mb-3 col-md-6">
-                               <input type="text" class="form-control" name="name" placeholder="Üye Adı">
+                               <input type="text" class="form-control" name="name" placeholder="First Name">
                                <label for="floatingFirst">{{__('manager/user/trainee-add-edit.name')}}</label>
                            </div>
 
                            <div class="form-floating mb-3 col-md-6">
-                               <input type="text" class="form-control" name="surname" placeholder="Üye Soyadı">
+                               <input type="text" class="form-control" name="surname" placeholder="Last Name">
                                <label for="floatingLast">{{__('manager/user/trainee-add-edit.surname')}}</label>
                            </div>
 
                            <div class="form-floating mb-3 col-md-6">
-                               <input type="email" class="form-control" name="email" placeholder="Eposta Adresi">
+                               <input type="email" class="form-control" name="email" placeholder="Email Address">
                                <label for="floatingMail">{{__('manager/user/trainee-add-edit.email_address')}}</label>
                            </div>
 
                            <div class="form-floating mb-3 col-md-6">
-                               <input type="password" class="form-control" name="password" placeholder="Şifre">
+                               <input type="password" class="form-control" name="password" placeholder="Password">
                                <label>{{__('manager/user/trainee-add-edit.password')}}</label>
                            </div>
 
                            <div class="form-floating mb-3 col-md-6">
-                               <input type="password" class="form-control" name="password_confirmation" id="password-confirm" placeholder="Şifre">
+                               <input type="password" class="form-control" name="password_confirmation" id="password-confirm" placeholder="Password">
                                <label for="floatingLast">{{__('manager/user/trainee-add-edit.password_repeat')}}</label>
                            </div>
 
                            <div class="form-floating mb-3 col-md-6">
-                               <input type="text" class="form-control" name="phone" placeholder="Telefon Numarası">
+                               <input type="text" class="form-control" name="phone" placeholder="Phone Number">
                                <label for="floatingPhone">{{__('manager/user/trainee-add-edit.phone')}}</label>
                            </div>
 
                             <div class="form-floating mb-3 col-md-6">
-                                <input type="text" class="form-control" name="address" placeholder="Adres">
+                                <input type="text" class="form-control" name="address" placeholder="Address">
                                 <label for="floatingAddress">{{__('manager/user/trainee-add-edit.address')}}</label>
                             </div>
 

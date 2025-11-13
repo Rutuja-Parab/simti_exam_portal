@@ -6,7 +6,7 @@
         <section class="content">
             <figure>
                 <blockquote class="blockquote">
-                    <h2>Ders Düzenle</h2>
+                    <h2>Edit Lesson</h2>
                 </blockquote>
             </figure>
             <div class="row">
@@ -21,18 +21,18 @@
                                         value="{{$language->id}}" {{$lessonContent->languageId == $language->id ? 'selected' : null}}>{{$language->title}}</option>
                                 @endforeach
                             </select>
-                            <label for="floatingSelect">Dil</label>
+                            <label for="floatingSelect">Language</label>
                         </div>
 
                         <div class="input-group mb-3">
                             <input type="file" class="form-control" name="file">
-                            <label class="input-group-text" for="inputGroupFile02">Ses Dosyası</label>
+                            <label class="input-group-text" for="inputGroupFile02">Audio File</label>
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="title" placeholder="Başlık"
+                            <input type="text" class="form-control" name="title" placeholder="Title"
                                    value="{{$lessonContent->title}}">
-                            <label for="floatingFirst">Başlık</label>
+                            <label for="floatingFirst">Title</label>
                         </div>
 
                         <div class="form-floating mb-3">
@@ -42,7 +42,7 @@
                                         value="{{$type->id}}" {{$lessonContent->typeId == $type->id ? 'selected' : null}}>{{$type->title}}</option>
                                 @endforeach
                             </select>
-                            <label for="floatingSelect">Kategori</label>
+                            <label for="floatingSelect">Category</label>
                         </div>
 
                         <textarea id="ckeditor" name="content">
@@ -51,9 +51,9 @@
 
                         <input type="hidden" name="ck_editor" value="1">
                         <div class="mt-3">
-                            <button type="button" onclick="createAndUpdateButton()" class="btn btn-success">Kaydet
+                            <button type="button" onclick="createAndUpdateButton()" class="btn btn-success">Save
                             </button>
-                            <a href="{{route('admin.lesson-content.index')}}" class="btn btn-danger">İptal</a>
+                            <a href="{{route('admin.lesson-content.index')}}" class="btn btn-danger">Cancel</a>
                         </div>
 
                     </form>
@@ -65,7 +65,7 @@
 @endsection
 
 @section('meta')
-    <title>Ders Düzenle</title>
+    <title>Edit Lesson</title>
 @endsection
 
 @section('css')

@@ -6,7 +6,7 @@
         <section class="content">
             <figure>
                 <blockquote class="blockquote">
-                    <h2>Kategori Güncelle</h2>
+                    <h2>Update Category</h2>
                 </blockquote>
             </figure>
             <div class="row">
@@ -15,15 +15,15 @@
                         @method('PUT') @csrf
 
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="title" placeholder="Kategori Adı"
+                            <input type="text" class="form-control" name="title" placeholder="Category Name"
                                    value="{{$type->title}}">
-                            <label for="floatingFirst">Kategori Adı</label>
+                            <label for="floatingFirst">Category Name</label>
                         </div>
 
                         <div class="mt-3">
-                            <button type="button" onclick="createAndUpdateButton()" class="btn btn-success">Kaydet
+                            <button type="button" onclick="createAndUpdateButton()" class="btn btn-success">Save
                             </button>
-                            <a href="{{route('admin.type.index')}}" class="btn btn-danger">İptal</a>
+                            <a href="{{route('admin.type.index')}}" class="btn btn-danger">Cancel</a>
                         </div>
 
                     </form>
@@ -35,7 +35,7 @@
 @endsection
 
 @section('meta')
-    <title>Kategori Düzenle</title>
+    <title>Edit Category</title>
 @endsection
 
 @section('css')

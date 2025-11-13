@@ -11,8 +11,8 @@ function couponCodeBtn() {
         if (res.data.status == false) {
             toastr.error(res.data.message, res.data.title);
         } else {
-            discount.innerHTML += `İndirim Yapılan Tutar : ${res.data.discount}`;
-            total_amount.innerHTML += `Toplam Ödenecek Tutar : ${res.data.total_amount}`;
+            discount.innerHTML += `Discount Amount : ${res.data.discount}`;
+            total_amount.innerHTML += `Total Amount Due : ${res.data.total_amount}`;
         }
 
     });

@@ -2,7 +2,7 @@ const btn = document.querySelector(".btn-success");
 
 function createAndUpdateButton() {
     btn.disabled = true;
-    btn.innerHTML = 'Kaydediliyor...';
+    btn.innerHTML = 'Saving...';
 
     const formData = document.forms.namedItem('form-data');
     if (formData.ck_editor) {
@@ -13,23 +13,23 @@ function createAndUpdateButton() {
         if (res.data.status === true) {
             toastr.success(res.data.message, res.data.title);
             btn.disabled = false;
-            btn.innerHTML = 'Kaydet';
+            btn.innerHTML = 'Save';
             setTimeout(() => {
                 window.location.href = backUrl;
             }, 3500)
         } else {
             toastr.error(res.data.message, res.data.title);
             btn.disabled = false;
-            btn.innerHTML = 'Kaydet';
+            btn.innerHTML = 'Save';
         }
     }).catch(err => {
         let error = err.response.data.errors;
         console.log(error);
         for (const [key, value] of Object.entries(error)) {
-            toastr.error(value, 'Başarısız');
+            toastr.error(value, 'Failed');
         }
         btn.disabled = false;
-        btn.innerHTML = 'Kaydet';
+        btn.innerHTML = 'Save';
     })
 }
 
@@ -37,7 +37,7 @@ const table = document.querySelector('#data-table');
 
 function deleteButton(r, actionUrl) {
     const list = r.parentNode.parentNode.rowIndex;
-    if (confirm('Silmek istediğinize emin misiniz ?') === true) {
+    if (confirm('Are you sure you want to delete?') === true) {
         axios.delete(actionUrl.replace('$', ''), {
             _method: 'DELETE',
         }).then(res => {
@@ -57,7 +57,7 @@ function multipleDeleteButton(actionUrl) {
     check_inputs.forEach((input) => {
         input.checked === true ? ArrCheck.push(input.value) : null;
     })
-    if (confirm('Silmek istediğinize emin misiniz ?') === true) {
+    if (confirm('Are you sure you want to delete?') === true) {
         axios.delete(actionUrl.replace('$', ''), {
             data: {
                 _token: __token,

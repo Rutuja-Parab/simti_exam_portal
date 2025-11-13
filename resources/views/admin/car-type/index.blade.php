@@ -6,20 +6,20 @@
         <section class="content">
             <figure>
                 <blockquote class="blockquote">
-                    <h2>Araç Türleri</h2>
+                    <h2>Vehicle Types</h2>
                 </blockquote>
             </figure>
 
             <div class="row">
                 <div class="col-12 col-lg-12">
-                    <h4><a href="{{route('admin.car-type.create')}}" class="btn btn-success">Araç Tipi Oluştur</a></h4>
+                    <h4><a href="{{route('admin.car-type.create')}}" class="btn btn-success">Create Vehicle Type</a></h4>
                 </div>
                 <div class="col-12 col-lg-12 mt-3 overflow-auto">
                     <table id="data-table" class="table table-striped" style="width:100%">
                         <thead>
                         <tr>
-                            <th>Araç Tipi</th>
-                            <th>İşlemler</th>
+                            <th>Vehicle Type</th>
+                            <th>Actions</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -47,7 +47,7 @@
 
 @section('meta')
 
-    <title>Araç Türleri</title>
+    <title>Vehicle Types</title>
 
 @endsection
 

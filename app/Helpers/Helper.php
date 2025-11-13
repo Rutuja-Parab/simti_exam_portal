@@ -70,7 +70,7 @@ function totalPoint($correct, $length): int
 function resultStatus($point): string
 {
     if ($point) {
-        return $point >= 70 ? 'Başarılı' : 'Başarısız';
+        return $point >= 70 ? 'Passed' : 'Failed';
     }
 
     return 0;
@@ -79,7 +79,7 @@ function resultStatus($point): string
 function examTime($questionLength): string
 {
     if ($questionLength == 50) {
-        return 45 .' dakika';
+        return 45 .' minutes';
     }
 
     return CarbonInterval::seconds($questionLength * 60)->cascade()->forHumans();

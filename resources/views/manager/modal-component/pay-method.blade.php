@@ -2,7 +2,7 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalToggleLabel">Ödeme Seçeneğini Seçiniz</h5>
+                <h5 class="modal-title" id="exampleModalToggleLabel">Select a Payment Option</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -23,18 +23,18 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalToggleLabel2">Banka Havalesi ile Ödeme</h5>
+                    <h5 class="modal-title" id="exampleModalToggleLabel2">Pay by Bank Transfer</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <span class="fw-bold">Ödenecek Tutar: {{$invoice->price}}</span>
-                    <p>Aşağıdaki iban adresine ödenecek tutar'ı göndermeniz halinde sisteminiz açılacaktır.</p>
-                    <p>Not: Mesaj kısmına <b>adınızı soyadınızı ve şirket adınızı yazınız</b></p>
+                    <span class="fw-bold">Amount Due: {{$invoice->price}}</span>
+                    <p>Your account will be activated once you send the amount due to the IBAN address below.</p>
+                    <p>Note: Please include <b>your full name and company name</b> in the message field.</p>
                     <span>Iban : {{$payment_methods->where('code','wire_transfer')->pluck('description')->first()}}</span>
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-success" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"
-                            data-bs-dismiss="modal">Geri git
+                            data-bs-dismiss="modal">Back
                     </button>
                 </div>
             </div>
@@ -48,25 +48,25 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalToggleLabel3">Online Ödeme</h5>
+                    <h5 class="modal-title" id="exampleModalToggleLabel3">Online Payment</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form name="coupon-form">
                     @csrf
                     <div class="modal-body">
-                        <span class="fw-normal mb-3">Ödenecek Tutar: {{$invoice->price}}</span><br>
+                        <span class="fw-normal mb-3">Amount Due: {{$invoice->price}}</span><br>
                         <span id="discount" class="fw-normal mb-3"></span><br>
                         <span id="total_amount" class="fw-bold mb-3 test-success"></span>
                         <div class="input-group mb-3 mt-3">
-                            <input type="text" class="form-control" name="coupon_code" placeholder="Kupon kodu" aria-label="Kupon kodu"
+                            <input type="text" class="form-control" name="coupon_code" placeholder="Coupon Code" aria-label="Coupon Code"
                                    aria-describedby="button-addon2">
-                            <button class="btn btn-outline-success" type="button" id="button-addon2" onclick="couponCodeBtn()">Uygula</button>
+                            <button class="btn btn-outline-success" type="button" id="button-addon2" onclick="couponCodeBtn()">Apply</button>
                         </div>
-                        <a class="btn btn-success col-md-12" href="{{route('manager.pay.online')}}">Öde</a>
+                        <a class="btn btn-success col-md-12" href="{{route('manager.pay.online')}}">Pay</a>
                     </div>
                     <div class="modal-footer">
                         <button class="btn btn-success" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"
-                                data-bs-dismiss="modal">Geri git
+                                data-bs-dismiss="modal">Back
                         </button>
                     </div>
                 </form>

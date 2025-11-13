@@ -6,7 +6,7 @@
         <section class="content">
             <figure>
                 <blockquote class="blockquote">
-                    <h2>Kullanıcı Düzenle</h2>
+                    <h2>Edit User</h2>
                 </blockquote>
             </figure>
             <div class="row">
@@ -15,91 +15,91 @@
                         @method('PUT') @csrf
 
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="tc" placeholder="TCKN"
+                            <input type="text" class="form-control" name="tc" placeholder="ID Number"
                                    value="{{$user->user->tc}}" maxlength="11">
-                            <label for="floatingFirst">TC Kimlik No</label>
+                            <label for="floatingFirst">ID Number</label>
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="name" placeholder="Üye Adı"
+                            <input type="text" class="form-control" name="name" placeholder="First Name"
                                    value="{{$user->user->name}}">
-                            <label for="floatingFirst">Adı</label>
+                            <label for="floatingFirst">First Name</label>
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="surname" placeholder="Üye Soyadı"
+                            <input type="text" class="form-control" name="surname" placeholder="Last Name"
                                    value="{{$user->user->surname}}">
-                            <label for="floatingLast">Soyadı</label>
+                            <label for="floatingLast">Last Name</label>
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="password" class="form-control" name="password" placeholder="Yeni Şifre">
-                            <label for="floatingLast">Yeni Şifre</label>
+                            <input type="password" class="form-control" name="password" placeholder="New Password">
+                            <label for="floatingLast">New Password</label>
                         </div>
 
                         <div class="form-floating mb-3">
                             <input type="password" class="form-control" name="password_confirmation"
-                                   id="password-confirm" placeholder="Şifre">
-                            <label for="floatingLast">Yeni Şifre Tekrar</label>
+                                   id="password-confirm" placeholder="Password">
+                            <label for="floatingLast">Confirm New Password</label>
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="email" class="form-control" name="email" placeholder="Eposta Adresi"
+                            <input type="email" class="form-control" name="email" placeholder="Email Address"
                                    value="{{$user->user->email}}">
-                            <label for="floatingMail">Eposta Adresi</label>
+                            <label for="floatingMail">Email Address</label>
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="phone" placeholder="Telefon Numarası"
+                            <input type="text" class="form-control" name="phone" placeholder="Phone Number"
                                    value="{{$user->phone}}">
-                            <label for="floatingPhone">Telefon Numarası</label>
+                            <label for="floatingPhone">Phone Number</label>
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="address" placeholder="Adres"
+                            <input type="text" class="form-control" name="address" placeholder="Address"
                                    value="{{$user->address}}">
-                            <label for="floatingAddress">Adres</label>
+                            <label for="floatingAddress">Address</label>
                         </div>
 
                         <div class="form-check form-switch">
                             <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="status"
                                    value="1"
                                 {{$user->status == 1 ? 'checked' : null}}>
-                            <label class="form-check-label" for="flexSwitchCheckChecked">Kullanıcı Aktif/Pasif</label>
+                            <label class="form-check-label" for="flexSwitchCheckChecked">User Active/Inactive</label>
                         </div>
 
                         <br>
 
                         <div class="form-floating">
                             <select class="form-select" name="languageId">
-                                <option disabled selected>Seçiniz</option>
+                                <option disabled selected>Select</option>
                                 @foreach($languages as $language)
                                     <option
                                         value="{{$language->id}}" {{$user->languageId == $language->id ? 'selected' : null}} >{{$language->title}}</option>
                                 @endforeach
                             </select>
-                            <label for="floatingSelect">Dil</label>
+                            <label for="floatingSelect">Language</label>
                         </div>
 
                         <br>
 
                         <div class="form-floating">
                             <select class="form-select" name="companyId">
-                                <option disabled selected>Seçiniz</option>
+                                <option disabled selected>Select</option>
                                 @foreach($companies as $company)
                                     <option
                                         value="{{$company->id}}" {{$user->companyId == $company->id ? 'selected' : null}}>{{$company->title}}</option>
                                 @endforeach
                             </select>
-                            <label for="floatingSelect">Şirket</label>
+                            <label for="floatingSelect">Company</label>
                         </div>
 
                         <br>
 
                         <div class="mt-3">
-                            <button type="button" onclick="createAndUpdateButton()" class="btn btn-success">Kaydet
+                            <button type="button" onclick="createAndUpdateButton()" class="btn btn-success">Save
                             </button>
-                            <a href="{{route('admin.manager-user.index')}}" class="btn btn-danger">İptal</a>
+                            <a href="{{route('admin.manager-user.index')}}" class="btn btn-danger">Cancel</a>
                         </div>
 
                     </form>
@@ -111,7 +111,7 @@
 @endsection
 
 @section('meta')
-    <title>Kullanıcı Düzenle</title>
+    <title>Edit User</title>
 @endsection
 
 @section('css')

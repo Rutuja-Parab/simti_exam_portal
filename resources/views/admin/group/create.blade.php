@@ -6,7 +6,7 @@
         <section class="content">
             <figure>
                 <blockquote class="blockquote">
-                    <h2>Grup Oluştur</h2>
+                    <h2>Create Group</h2>
                 </blockquote>
             </figure>
             <div class="row">
@@ -15,14 +15,14 @@
                         @csrf
 
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="title" placeholder="Dil Kodu">
-                            <label for="floatingFirst">Ehliyet Grubu</label>
+                            <input type="text" class="form-control" name="title" placeholder="License Group">
+                            <label for="floatingFirst">License Group</label>
                         </div>
 
                         <div class="mt-3">
-                            <button type="button" onclick="createAndUpdateButton()" class="btn btn-success">Kaydet
+                            <button type="button" onclick="createAndUpdateButton()" class="btn btn-success">Save
                             </button>
-                            <a href="{{route('admin.group.index')}}" class="btn btn-danger">İptal</a>
+                            <a href="{{route('admin.group.index')}}" class="btn btn-danger">Cancel</a>
                         </div>
 
                     </form>
@@ -34,7 +34,7 @@
 @endsection
 
 @section('meta')
-    <title>Grup Oluştur</title>
+    <title>Create Group</title>
 @endsection
 
 @section('css')

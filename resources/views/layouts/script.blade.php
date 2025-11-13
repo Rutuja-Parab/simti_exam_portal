@@ -4,28 +4,28 @@
         $('#data-table').DataTable({
             "aaSorting": [],
             "language": {
-                "searchPlaceholder": "Arama Yapın...",
+                "searchPlaceholder": "Search...",
                 "decimal": "",
-                "emptyTable": "Kayıt Bulunamadı",
+                "emptyTable": "No records found",
                 "info": "",
                 "infoEmpty": "",
-                "infoFiltered": "(_MAX_ toplam girişten filtrelendi)",
+                "infoFiltered": "(filtered from _MAX_ total entries)",
                 "infoPostFix": "",
                 "thousands": ",",
-                "lengthMenu": "Sayfa Başına _MENU_",
-                "loadingRecords": "Yükleniyor...",
-                "processing": "İşlemde...",
+                "lengthMenu": "Show _MENU_ per page",
+                "loadingRecords": "Loading...",
+                "processing": "Processing...",
                 "search": "",
-                "zeroRecords": "Hiçbir kayıt bulunamadı",
+                "zeroRecords": "No matching records found",
                 "paginate": {
-                    "first": "Birinci",
-                    "last": "Sonuncu",
-                    "next": "Sonraki",
-                    "previous": "Önceki"
+                    "first": "First",
+                    "last": "Last",
+                    "next": "Next",
+                    "previous": "Previous"
                 },
                 "aria": {
-                    "sortAscending": ": sütunu artan şekilde sıralamak için etkinleştir",
-                    "sortDescending": ": sütunu azalan sıralamak için etkinleştir"
+                    "sortAscending": ": activate to sort column ascending",
+                    "sortDescending": ": activate to sort column descending"
                 },
             },
             responsive: true

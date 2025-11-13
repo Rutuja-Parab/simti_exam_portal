@@ -17,31 +17,31 @@
                         <div class="row">
                             <div class="col-md-6 col-sm-12">
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" name="title" placeholder="Şirket Adı"
+                                    <input type="text" class="form-control" name="title" placeholder="Company Name"
                                            value="{{$company->title}}">
                                     <label for="floatingFirst">{{__('manager/company.name')}}</label>
                                 </div>
 
                                 <div class="form-floating mb-3">
                                     <input type="text" class="form-control" name="tax_no" maxlength="11"
-                                           placeholder="Vergi No" value="{{$company->info->tax_no}}">
+                                           placeholder="Tax Number" value="{{$company->info->tax_no}}">
                                     <label for="floatingFirst">{{__('manager/company.tax_no')}}</label>
                                 </div>
 
                                 <div class="form-floating mb-3">
-                                    <input type="email" class="form-control" name="email" placeholder="E-mail"
+                                    <input type="email" class="form-control" name="email" placeholder="Email"
                                            value="{{$company->info->email}}">
                                     <label for="floatingFirst">{{__('manager/company.email')}}</label>
                                 </div>
 
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" name="website_url" placeholder="Web Site"
+                                    <input type="text" class="form-control" name="website_url" placeholder="Website"
                                            value="{{$company->info->website_url}}">
                                     <label for="floatingFirst">{{__('manager/company.website')}}</label>
                                 </div>
 
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" name="phone" placeholder="Telefon"
+                                    <input type="text" class="form-control" name="phone" placeholder="Phone"
                                            value="{{$company->info->phone}}">
                                     <label for="floatingFirst">{{__('manager/company.phone')}}</label>
                                 </div>
@@ -83,7 +83,7 @@
                                 </div>
 
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" name="zip_code" placeholder="Posta Kodu"
+                                    <input type="text" class="form-control" name="zip_code" placeholder="Postal Code"
                                            value="{{$company->info->zip_code}}">
                                     <label for="floatingFirst">{{__('manager/company.zipcode')}}</label>
                                 </div>
@@ -95,7 +95,7 @@
                         </div>
 
                         <div class="form-floating mb-4">
-                            <input type="text" class="form-control" name="address" placeholder="Adres"
+                            <input type="text" class="form-control" name="address" placeholder="Address"
                                    value="{{$company->info->address}}">
                             <label for="floatingFirst">{{__('manager/company.address')}}</label>
                         </div>

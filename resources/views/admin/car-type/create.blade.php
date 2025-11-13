@@ -5,7 +5,7 @@
         <section class="content">
             <figure>
                 <blockquote class="blockquote">
-                    <h2>Araç Tipi Oluştur</h2>
+                    <h2>Create Vehicle Type</h2>
                 </blockquote>
             </figure>
             <div class="row">
@@ -15,13 +15,13 @@
 
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control" name="title">
-                            <label for="floatingFirst">Araç Türü</label>
+                            <label for="floatingFirst">Vehicle Type</label>
                         </div>
 
                         <div class="mt-3">
-                            <button type="button" onclick="createAndUpdateButton()" class="btn btn-success">Kaydet
+                            <button type="button" onclick="createAndUpdateButton()" class="btn btn-success">Save
                             </button>
-                            <a href="{{ route('admin.car-type.index') }}" class="btn btn-danger">İptal</a>
+                            <a href="{{ route('admin.car-type.index') }}" class="btn btn-danger">Cancel</a>
                         </div>
 
                     </form>
@@ -32,7 +32,7 @@
 @endsection
 
 @section('meta')
-    <title>Araç Tipi Oluştur</title>
+    <title>Create Vehicle Type</title>
 @endsection
 
 @section('css')
@@ -41,9 +41,9 @@
 
 @section('js')
     <script>
-        // Form verilerinin gönderileceği URL
+        // Endpoint to submit form data
         const actionUrl = '{{ route('admin.car-type.store') }}';
-        // Kullanıcıyı geri yönlendirecek URL
+        // URL to redirect the user back
         const backUrl = '{{ route('admin.car-type.index') }}';
     </script>
     @include('partials.script')

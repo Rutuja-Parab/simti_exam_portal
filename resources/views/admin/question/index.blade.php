@@ -6,24 +6,24 @@
         <section class="content">
             <figure>
                 <blockquote class="blockquote">
-                    <h2>Sorular</h2>
+                    <h2>Questions</h2>
                 </blockquote>
             </figure>
             <div class="row">
                 <div class="col-12 col-lg-12">
                     <h4>
-                        <a href="{{route('admin.question.create')}}" class="btn btn-success">Soru Oluştur</a>
-                        <a href="{{route('admin.question.bug')}}" class="btn btn-danger">Hatalı Sorular</a>
+                        <a href="{{route('admin.question.create')}}" class="btn btn-success">Create Question</a>
+                        <a href="{{route('admin.question.bug')}}" class="btn btn-danger">Bugged Questions</a>
                     </h4>
                 </div>
                 <div class="col-12 col-lg-12 mt-3 overflow-auto mb-5">
                     <table id="data-table" class="table table-striped">
                         <thead>
                         <tr>
-                            <th scope="col">Soru</th>
-                            <th scope="col">Soru Dili</th>
-                            <th scope="col">Soru Kategorisi</th>
-                            <th scope="col">İşlemler</th>
+                            <th scope="col">Question</th>
+                            <th scope="col">Question Language</th>
+                            <th scope="col">Question Category</th>
+                            <th scope="col">Actions</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -53,7 +53,7 @@
 @endsection
 
 @section('meta')
-    <title>Sorular</title>
+    <title>Questions</title>
 @endsection
 
 @section('css')

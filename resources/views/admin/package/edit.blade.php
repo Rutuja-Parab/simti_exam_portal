@@ -6,7 +6,7 @@
         <section class="content">
             <figure>
                 <blockquote class="blockquote">
-                    <h2>Paket Güncelle</h2>
+                    <h2>Update Package</h2>
                 </blockquote>
             </figure>
             <div class="row">
@@ -17,15 +17,15 @@
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control" id="floatingPackageName" name="title"
                                    value="{{$package->title}}">
-                            <label for="floatingPackageName">Paket Adı</label>
+                            <label for="floatingPackageName">Package Name</label>
                         </div>
 
                         <div class="form-floating mb-3">
-                            <textarea class="form-control" name="description" placeholder="Paket Açıklaması"
+                            <textarea class="form-control" name="description" placeholder="Package Description"
                                       id="floatingTextarea2" style="height: 100px">
                                 {!! $package->description !!}
                             </textarea>
-                            <label for="floatingTextarea2">Paket Açıklaması</label>
+                            <label for="floatingTextarea2">Package Description</label>
                         </div>
 
                         <div class="form-floating mb-3">
@@ -36,19 +36,19 @@
 
                         <div class="form-floating mb-3">
                             <select class="form-select" name="planId">
-                                <option disabled selected>Seçiniz</option>
+                                <option disabled selected>Select</option>
                                 @foreach($paymentPlans as $paymentPlan)
                                     <option
                                         value="{{$paymentPlan->id}}" {{$package->planId == $paymentPlan->id ? 'selected' : null}}>{{$paymentPlan->description}}</option>
                                 @endforeach
                             </select>
-                            <label for="floatingSelect">Ödeme Planı</label>
+                            <label for="floatingSelect">Payment Plan</label>
                         </div>
 
                         <div class="mt-3">
-                            <button type="button" onclick="createAndUpdateButton()" class="btn btn-success">Kaydet
+                            <button type="button" onclick="createAndUpdateButton()" class="btn btn-success">Save
                             </button>
-                            <a href="{{route('admin.package.index')}}" class="btn btn-danger">İptal</a>
+                            <a href="{{route('admin.package.index')}}" class="btn btn-danger">Cancel</a>
                         </div>
 
                     </form>
@@ -60,7 +60,7 @@
 @endsection
 
 @section('meta')
-    <title>Paket Düzenle</title>
+    <title>Edit Package</title>
 @endsection
 
 @section('css')

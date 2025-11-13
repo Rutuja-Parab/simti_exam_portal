@@ -5,7 +5,7 @@
     <form method="POST" action="{{ route('password.email') }}">
         @csrf
         <div class="signin" [hidden]="login">
-            <h1 class="topline">Şifreyi yenile</h1>
+            <h1 class="topline">Reset Password</h1>
             <br />
             @if (session('status'))
                 <div class="alert alert-success" role="alert">
@@ -24,7 +24,7 @@
 
             <div class="login-box-button">
                 <button type="submit">
-                    Şifre Sıfırlama Bağlantısını Gönder
+                    Send Password Reset Link
                 </button>
             </div>
         </div>

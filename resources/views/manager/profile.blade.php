@@ -15,41 +15,41 @@
                         @method('PUT')
                         @csrf
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="name" placeholder="Üye Adı"
+                            <input type="text" class="form-control" name="name" placeholder="First Name"
                                    value="{{$user->user->name}}">
                             <label for="floatingFirst">{{__('manager/profile.name')}}</label>
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="surname" placeholder="Üye Soyadı"
+                            <input type="text" class="form-control" name="surname" placeholder="Last Name"
                                    value="{{$user->user->surname}}">
                             <label for="floatingLast">{{__('manager/profile.surname')}}</label>
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="password" class="form-control" name="password" placeholder="Yeni Şifre">
+                            <input type="password" class="form-control" name="password" placeholder="New Password">
                             <label for="floatingLast">{{__('manager/profile.new_password')}}</label>
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="password" class="form-control" name="password_confirmation" id="password-confirm" placeholder="Şifre">
+                            <input type="password" class="form-control" name="password_confirmation" id="password-confirm" placeholder="Password">
                             <label for="floatingLast">{{__('manager/profile.new_password_repeat')}}</label>
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="email" class="form-control" name="email" placeholder="Eposta Adresi"
+                            <input type="email" class="form-control" name="email" placeholder="Email Address"
                                    value="{{$user->user->email}}">
                             <label for="floatingMail">{{__('manager/profile.email_address')}}</label>
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="phone" placeholder="Telefon Numarası"
+                            <input type="text" class="form-control" name="phone" placeholder="Phone Number"
                                    value="{{$user->phone}}">
                             <label for="floatingPhone">{{__('manager/profile.phone')}}</label>
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="address" placeholder="Adres"
+                            <input type="text" class="form-control" name="address" placeholder="Address"
                                    value="{{$user->address}}">
                             <label for="floatingAddress">{{__('manager/profile.address')}}</label>
                         </div>

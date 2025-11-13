@@ -6,7 +6,7 @@
         <section class="content">
             <figure>
                 <blockquote class="blockquote">
-                    <h2>Araç Tipi Güncelle</h2>
+                    <h2>Update Vehicle Type</h2>
                 </blockquote>
             </figure>
             <div class="row">
@@ -17,13 +17,13 @@
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control" name="title"
                                    value="{{$car_type->title}}">
-                            <label for="floatingFirst">Araç Tipi</label>
+                            <label for="floatingFirst">Vehicle Type</label>
                         </div>
 
                         <div class="mt-3">
-                            <button type="button" onclick="createAndUpdateButton()" class="btn btn-success">Kaydet
+                            <button type="button" onclick="createAndUpdateButton()" class="btn btn-success">Save
                             </button>
-                            <a href="{{route('admin.car-type.index')}}" class="btn btn-danger">İptal</a>
+                            <a href="{{route('admin.car-type.index')}}" class="btn btn-danger">Cancel</a>
                         </div>
 
                     </form>
@@ -35,7 +35,7 @@
 @endsection
 
 @section('meta')
-    <title>Araç Tipi Düzenle</title>
+    <title>Edit Vehicle Type</title>
 @endsection
 
 @section('css')

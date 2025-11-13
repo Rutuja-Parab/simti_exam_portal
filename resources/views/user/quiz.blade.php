@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="icon" href="<{{companyLogo()}}>">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <title>Sınav</title>
+    <title>Exam</title>
     <link href="/css/app.655e2511.css" rel="preload" as="style">
     <link href="/css/chunk-vendors.d1c25f40.css" rel="preload" as="style">
     <link href="/js/app.c45bbc61.js" rel="preload" as="script">

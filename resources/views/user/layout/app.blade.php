@@ -7,7 +7,7 @@
     <meta http-equiv="content-language" content="{{ app()->getLocale() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
-          content="Quiz app uygulaması codenteq adı altında yazılmış bir online sınav uygulamasıdır.">
+          content="Quiz App is an online examination platform developed under the Codenteq brand.">
     <meta name="generator" content="Quiz App">
     @yield('meta')
 

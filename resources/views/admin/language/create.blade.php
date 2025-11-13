@@ -6,7 +6,7 @@
         <section class="content">
             <figure>
                 <blockquote class="blockquote">
-                    <h2>Dil Oluştur</h2>
+                    <h2>Create Language</h2>
                 </blockquote>
             </figure>
             <div class="row">
@@ -15,21 +15,21 @@
                         @csrf
 
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="code" placeholder="Dil Kodu">
-                            <label for="floatingFirst">Dil Kodu</label>
+                            <input type="text" class="form-control" name="code" placeholder="Language Code">
+                            <label for="floatingFirst">Language Code</label>
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="title" placeholder="Dil Adı">
-                            <label for="floatingFirst">Dil Adı</label>
+                            <input type="text" class="form-control" name="title" placeholder="Language Name">
+                            <label for="floatingFirst">Language Name</label>
                         </div>
 
                         <br>
 
                         <div class="mt-3">
-                            <button type="button" onclick="createAndUpdateButton()" class="btn btn-success">Kaydet
+                            <button type="button" onclick="createAndUpdateButton()" class="btn btn-success">Save
                             </button>
-                            <a href="{{route('admin.language.index')}}" class="btn btn-danger">İptal</a>
+                            <a href="{{route('admin.language.index')}}" class="btn btn-danger">Cancel</a>
                         </div>
 
                     </form>
@@ -41,7 +41,7 @@
 @endsection
 
 @section('meta')
-    <title>Dil Oluştur</title>
+    <title>Create Language</title>
 @endsection
 
 @section('css')

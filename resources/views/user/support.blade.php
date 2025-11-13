@@ -12,12 +12,12 @@
             <div class="row">
                 <form class="p-5" name="form-data">
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingWhy" name="subject" placeholder="İletişim Nedeniniz?">
+                        <input type="text" class="form-control" id="floatingWhy" name="subject" placeholder="Reason for contacting us?">
                         <label for="floatingWhy">{{__('user/support.contact_why')}}</label>
                     </div>
 
                     <div class="form-floating">
-                            <textarea class="form-control" placeholder="Mesajınız" name="message" id="floatingTextarea"
+                            <textarea class="form-control" placeholder="Your message" name="message" id="floatingTextarea"
                                       style="height: 100px"></textarea>
                         <label for="floatingTextarea">{{__('user/support.message')}}</label>
                     </div>

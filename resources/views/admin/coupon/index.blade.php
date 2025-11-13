@@ -6,23 +6,23 @@
         <section class="content">
             <figure>
                 <blockquote class="blockquote">
-                    <h2>Kuponlar</h2>
+                    <h2>Coupons</h2>
                 </blockquote>
             </figure>
 
             <div class="row">
                 <div class="col-12 col-lg-12">
-                    <h4><a href="{{route('admin.coupon.create')}}" class="btn btn-success">Kupon Oluştur</a></h4>
+                    <h4><a href="{{route('admin.coupon.create')}}" class="btn btn-success">Create Coupon</a></h4>
                 </div>
                 <div class="col-12 col-lg-12 mt-3 overflow-auto">
                     <table id="data-table" class="table table-striped" style="width:100%">
                         <thead>
                         <tr>
-                            <th>Kupon kodu</th>
-                            <th>İndirim Oranı</th>
-                            <th>Başlangıç tarihi</th>
-                            <th>Bitiş tarihi</th>
-                            <th>İşlemler</th>
+                            <th>Coupon Code</th>
+                            <th>Discount Rate</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Actions</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -51,7 +51,7 @@
 
 @section('meta')
 
-    <title>Kuponlar</title>
+    <title>Coupons</title>
 
 @endsection
 

@@ -6,7 +6,7 @@
         <section class="content">
             <figure>
                 <blockquote class="blockquote">
-                    <h2>Hatalı Sorular</h2>
+                    <h2>Bugged Questions</h2>
                 </blockquote>
             </figure>
             <div class="row">
@@ -14,10 +14,10 @@
                     <table id="data-table" class="table table-striped">
                         <thead>
                         <tr>
-                            <th scope="col">Soru</th>
-                            <th scope="col">Soru Dili</th>
-                            <th scope="col">Oluşturulma Tarihi</th>
-                            <th scope="col">İşlemler</th>
+                            <th scope="col">Question</th>
+                            <th scope="col">Question Language</th>
+                            <th scope="col">Created Date</th>
+                            <th scope="col">Actions</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -46,7 +46,7 @@
 @endsection
 
 @section('meta')
-    <title>Hatalı Sorular</title>
+    <title>Bugged Questions</title>
 @endsection
 
 @section('css')

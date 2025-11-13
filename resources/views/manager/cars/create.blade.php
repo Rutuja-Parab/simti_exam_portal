@@ -15,7 +15,7 @@
                         @csrf
 
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="plate_code" placeholder="Araç Plaka">
+                            <input type="text" class="form-control" name="plate_code" placeholder="Vehicle Plate">
                             <label for="floatingFirst">{{__('manager/car-appointment/car.plate_code')}}</label>
                         </div>
 
@@ -51,7 +51,7 @@
 @endsection
 
 @section('meta')
-    <title>Araç Ekle</title>
+    <title>{{__('manager/menu.car_create')}}</title>
 @endsection
 
 @section('css')

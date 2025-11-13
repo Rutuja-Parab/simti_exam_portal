@@ -6,7 +6,7 @@
         <section class="content">
             <figure>
                 <blockquote class="blockquote">
-                    <h2>Ana Sayfa</h2>
+                    <h2>Home</h2>
                 </blockquote>
             </figure>
             <div class="container text-center"></div>
@@ -16,7 +16,7 @@
 @endsection
 
 @section('meta')
-    <title>Üst Yönetici Paneli</title>
+    <title>Admin Dashboard</title>
 @endsection
 
 @section('css')

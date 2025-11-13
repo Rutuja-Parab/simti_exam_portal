@@ -15,19 +15,19 @@
                         @csrf @method('PUT')
 
                         <div class="form-floating mb-3">
-                            <input type="datetime-local" class="form-control" name="live_date" placeholder="Tarih"
+                            <input type="datetime-local" class="form-control" name="live_date" placeholder="Date"
                                    value="{{\Carbon\Carbon::parse($live_lesson->live_date)->format("Y-m-d\TH:i:s")}}">
                             <label for="floatingFirst">{{__('manager/live-lesson/live-lesson-add-edit.date')}} </label>
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="title" placeholder="Üye Adı"
+                            <input type="text" class="form-control" name="title" placeholder="Lesson Name"
                                    value="{{$live_lesson->title}}">
                             <label for="floatingFirst">{{__('manager/live-lesson/live-lesson-add-edit.name')}}</label>
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="url" placeholder="Ders Link"
+                            <input type="text" class="form-control" name="url" placeholder="Lesson Link"
                                    value="{{$live_lesson->url}}">
                             <label for="floatingFirst">{{__('manager/live-lesson/live-lesson-add-edit.link')}}</label>
                         </div>

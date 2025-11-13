@@ -21,37 +21,37 @@
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="name" placeholder="Ad" value="{{$user->user->name}}">
+                            <input type="text" class="form-control" name="name" placeholder="First Name" value="{{$user->user->name}}">
                             <label for="floatingFirst">{{__('manager/teacher/teacher-add-edit.name')}}</label>
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="surname" placeholder="Soyad" value="{{$user->user->surname}}">
+                            <input type="text" class="form-control" name="surname" placeholder="Last Name" value="{{$user->user->surname}}">
                             <label for="floatingFirst">{{__('manager/teacher/teacher-add-edit.surname')}}</label>
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="email" class="form-control" name="email" placeholder="E-posta" value="{{$user->user->email}}">
+                            <input type="email" class="form-control" name="email" placeholder="Email" value="{{$user->user->email}}">
                             <label for="floatingFirst">{{__('manager/teacher/teacher-add-edit.email')}}</label>
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="password" class="form-control" name="password" placeholder="Yeni Şifre">
+                            <input type="password" class="form-control" name="password" placeholder="New Password">
                             <label for="floatingFirst">{{__('manager/teacher/teacher-add-edit.new_password')}}</label>
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="password" class="form-control" name="password_confirmation" id="password-confirm" placeholder="Şifre">
+                            <input type="password" class="form-control" name="password_confirmation" id="password-confirm" placeholder="Password">
                             <label for="floatingLast">{{__('manager/teacher/teacher-add-edit.new_password_repeat')}}</label>
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="phone" placeholder="Telefon" value="{{$user->phone}}">
+                            <input type="text" class="form-control" name="phone" placeholder="Phone" value="{{$user->phone}}">
                             <label for="floatingFirst">{{__('manager/teacher/teacher-add-edit.phone')}}</label>
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingAddress" placeholder="Adres"
+                            <input type="text" class="form-control" id="floatingAddress" placeholder="Address"
                                    name="address"
                                    value="{{$user->address}}">
                             <label for="floatingAddress">{{__('manager/teacher/teacher-add-edit.address')}}</label>
@@ -64,7 +64,7 @@
                                         value="{{$language->id}}" {{$language->id == $user->languageId ? 'selected' : null}}>{{$language->title}}</option>
                                 @endforeach
                             </select>
-                            <label for="floatingSelect">{{__('manager/teacher/teacher-add-edit.language')}}...</label>
+                            <label for="floatingSelect">{{__('manager/teacher/teacher-add-edit.language')}}</label>
                         </div>
 
                         <div class="form-check form-switch">

@@ -6,7 +6,7 @@
         <section class="content">
             <figure>
                 <blockquote class="blockquote">
-                    <h2>Faturalar</h2>
+                    <h2>Invoices</h2>
                 </blockquote>
             </figure>
 
@@ -15,11 +15,11 @@
                     <table id="data-table" class="table table-striped">
                         <thead>
                         <tr>
-                            <th scope="col">Fatura İd</th>
-                            <th scope="col">Fatura Tarihi</th>
-                            <th scope="col">Genel Toplam</th>
-                            <th scope="col">Durum</th>
-                            <th scope="col">İşlemler</th>
+                            <th scope="col">Invoice ID</th>
+                            <th scope="col">Invoice Date</th>
+                            <th scope="col">Grand Total</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Actions</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -28,7 +28,7 @@
                                 <th scope="row">{{$invoice->id}}</th>
                                 <td>{{$invoice->created_at}}</td>
                                 <td>{{$invoice->total_amount}}</td>
-                                <td class="{{$invoice->status == 1 ? 'text-success' : 'text-danger'}} fw-bold">{{$invoice->status == 1 ? 'Ödendi' : 'Ödenmedi'}}</td>
+                                <td class="{{$invoice->status == 1 ? 'text-success' : 'text-danger'}} fw-bold">{{$invoice->status == 1 ? 'Paid' : 'Unpaid'}}</td>
                                 <td>
                                     <a href="{{route('admin.company.invoice.show',$invoice)}}" target="_blank">
                                         <i class="bi bi-eye text-dark fs-5"></i>
@@ -53,7 +53,7 @@
 
 @section('meta')
 
-    <title>Faturalar</title>
+    <title>Invoices</title>
 
 @endsection
 

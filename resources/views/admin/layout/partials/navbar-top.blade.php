@@ -24,9 +24,9 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-end navbar-dropdown-open" aria-labelledby="navbarDropdown">
                         <span class="text-secondary ms-2">Version : {{ app()->version() }}</span>
-                        <a class="dropdown-item" href="{{route('admin.profile.edit')}}">Profil</a>
+                        <a class="dropdown-item" href="{{route('admin.profile.edit')}}">Profile</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="{{route('logout-user')}}">Çıkış Yap</a>
+                        <a class="dropdown-item" href="{{route('logout-user')}}">Sign Out</a>
                     </div>
                 </li>
             </ul>

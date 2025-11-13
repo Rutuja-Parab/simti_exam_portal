@@ -20,12 +20,12 @@
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="title" placeholder="Ders Adı">
+                            <input type="text" class="form-control" name="title" placeholder="Lesson Name">
                             <label for="floatingFirst">{{__('manager/live-lesson/live-lesson-add-edit.name')}}</label>
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="url" placeholder="Ders Link">
+                            <input type="text" class="form-control" name="url" placeholder="Lesson Link">
                             <label for="floatingFirst">{{__('manager/live-lesson/live-lesson-add-edit.link')}}</label>
                         </div>
 

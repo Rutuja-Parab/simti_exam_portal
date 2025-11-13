@@ -6,7 +6,7 @@
         <section class="content">
             <figure>
                 <blockquote class="blockquote">
-                    <h2>Dönem Oluştur</h2>
+                    <h2>Create Period</h2>
                 </blockquote>
             </figure>
             <div class="row">
@@ -15,14 +15,14 @@
                         @csrf
 
                         <div class="form-floating mb-3">
-                            <input type="number" class="form-control" name="title" placeholder="Dönem">
-                            <label for="floatingFirst">Dönem</label>
+                            <input type="number" class="form-control" name="title" placeholder="Period">
+                            <label for="floatingFirst">Period</label>
                         </div>
 
                         <div class="mt-3">
-                            <button type="button" onclick="createAndUpdateButton()" class="btn btn-success">Kaydet
+                            <button type="button" onclick="createAndUpdateButton()" class="btn btn-success">Save
                             </button>
-                            <a href="{{route('admin.period.index')}}" class="btn btn-danger">İptal</a>
+                            <a href="{{route('admin.period.index')}}" class="btn btn-danger">Cancel</a>
                         </div>
 
                     </form>
@@ -34,7 +34,7 @@
 @endsection
 
 @section('meta')
-    <title>Dönem Oluştur</title>
+    <title>Create Period</title>
 @endsection
 
 @section('css')

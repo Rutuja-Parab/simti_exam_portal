@@ -32,7 +32,7 @@
                         <br>
 
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="title" placeholder="Başlık">
+                            <input type="text" class="form-control" name="title" placeholder="Title">
                             <label for="floatingFirst">{{__('manager/question/question-add-edit.question')}}</label>
                         </div>
 
@@ -65,7 +65,7 @@
 
                         <div class="row mb-3 text-choice">
                             <div class="form-floating ps-1 col-10">
-                                <input type="text" class="form-control " name="choice_text_1" placeholder="Cevap 01">
+                                <input type="text" class="form-control " name="choice_text_1" placeholder="Answer 01">
                                 <label class="" for="floatingFirst">{{__('manager/question/question-add-edit.choice_input')}} 01</label>
                             </div>
                             <div class="col-1">
@@ -81,7 +81,7 @@
 
                         <div class="row mb-3 text-choice">
                             <div class="form-floating ps-1 col-10">
-                                <input type="text" class="form-control " name="choice_text_2" placeholder="Cevap 02">
+                                <input type="text" class="form-control " name="choice_text_2" placeholder="Answer 02">
                                 <label class="" for="floatingFirst">{{__('manager/question/question-add-edit.choice_input')}} 02</label>
                             </div>
                             <div class="col-1">
@@ -97,7 +97,7 @@
 
                         <div class="row mb-3 text-choice">
                             <div class="form-floating ps-1 col-10">
-                                <input type="text" class="form-control " name="choice_text_3" placeholder="Cevap 0">
+                                <input type="text" class="form-control " name="choice_text_3" placeholder="Answer 03">
                                 <label class="" for="floatingFirst">{{__('manager/question/question-add-edit.choice_input')}} 03</label>
                             </div>
                             <div class="col-1">
@@ -113,7 +113,7 @@
 
                         <div class="row mb-3 text-choice">
                             <div class="form-floating ps-1 col-10">
-                                <input type="text" class="form-control " name="choice_text_4" placeholder="Cevap 04">
+                                <input type="text" class="form-control " name="choice_text_4" placeholder="Answer 04">
                                 <label class="" for="floatingFirst">{{__('manager/question/question-add-edit.choice_input')}} 04</label>
                             </div>
                             <div class="col-1">

@@ -34,7 +34,7 @@
                                 <th scope="row">{{$invoice->id}}</th>
                                 <td>{{$invoice->created_at}}</td>
                                 <td>{{$invoice->total_amount}}</td>
-                                <td class="{{$invoice->status == 1 ? 'text-success' : 'text-danger'}} fw-bold">{{$invoice->status == 1 ? 'Ödendi' : 'Ödenmedi'}}</td>
+                                <td class="{{$invoice->status == 1 ? 'text-success' : 'text-danger'}} fw-bold">{{$invoice->status == 1 ? 'Paid' : 'Unpaid'}}</td>
                                 <td>
                                     @if(session('invoice'))
                                         <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#pay">

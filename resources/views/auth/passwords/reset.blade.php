@@ -4,7 +4,7 @@
     <form method="POST" action="{{ route('password.update') }}">
         @csrf
         <div class="signin" [hidden]="login">
-            <h1 class="topline">Şifreyi Yenile</h1>
+            <h1 class="topline">Reset Password</h1>
             <br/>
 
             <input type="hidden" name="token" value="{{ $token }}">
@@ -21,7 +21,7 @@
             </div>
 
             <div class="input-field">
-                <input id="password" type="password" placeholder="Şifre"
+                <input id="password" type="password" placeholder="Password"
                        class="form-control @error('password') is-invalid @enderror" name="password" required
                        autocomplete="new-password">
 
@@ -32,12 +32,12 @@
                 @enderror
             </div>
             <div class="input-field">
-                <input id="password" type="password" placeholder="Şifreyi yenile" class="form-control"
+                <input id="password" type="password" placeholder="Confirm Password" class="form-control"
                        name="password_confirmation" required autocomplete="new-password">
             </div>
             <div class="login-box-button">
                 <button type="submit">
-                    Şifre Yenile
+                    Reset Password
                 </button>
             </div>
         </div>

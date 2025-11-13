@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Fatura</title>
+    <title>Invoice</title>
 
     <style>
         .invoice-box {
@@ -112,8 +112,8 @@
                         </td>
 
                         <td>
-                            Fatura No #: {{$invoice->id}}<br/>
-                            Oluşturma: {{$invoice->created_at->format('d-m-Y')}}<br/>
+                            Invoice No #: {{$invoice->id}}<br/>
+                            Created: {{$invoice->created_at->format('d-m-Y')}}<br/>
                         </td>
                     </tr>
                 </table>
@@ -139,7 +139,7 @@
         </tr>
 
         <tr class="heading">
-            <td>Ödeme Yöntemi</td>
+            <td>Payment Method</td>
 
             <td></td>
         </tr>
@@ -150,9 +150,9 @@
         </tr>
 
         <tr class="heading">
-            <td>Ürün</td>
+            <td>Product</td>
 
-            <td>Fiyat</td>
+            <td>Price</td>
         </tr>
 
         <tr class="item">
@@ -162,7 +162,7 @@
         </tr>
 
         <tr class="item">
-            <td>İndirim Tutarı</td>
+            <td>Discount Amount</td>
 
             <td>- ₺{{$invoice->discount_amount ?? 0}}</td>
         </tr>
@@ -170,7 +170,7 @@
         <tr class="Fiyat">
             <td></td>
 
-            <td>Toplam: ₺{{$invoice->total_amount}}</td>
+            <td>Total: ₺{{$invoice->total_amount}}</td>
         </tr>
     </table>
 </div>

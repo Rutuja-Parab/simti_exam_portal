@@ -6,7 +6,7 @@
         <section class="content">
             <figure>
                 <blockquote class="blockquote">
-                    <h2>Soru Ekle</h2>
+                    <h2>Add Question</h2>
                 </blockquote>
             </figure>
             <div class="row">
@@ -20,29 +20,29 @@
                                     <option value="{{$language->id}}">{{$language->title}}</option>
                                 @endforeach
                             </select>
-                            <label for="floatingSelect">Soru Dilini Seçin</label>
+                            <label for="floatingSelect">Select Question Language</label>
                         </div>
 
                         <div class="form-check form-switch">
                             <input class="form-check-input" type="checkbox" name="questionImage"
                                    id="switchQuestionImageShow">
-                            <label class="form-check-label" for="switchQuestionImageShow">Soru Resim</label>
+                            <label class="form-check-label" for="switchQuestionImageShow">Question Image</label>
                         </div>
 
                         <br>
 
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="title" placeholder="Başlık">
-                            <label for="floatingFirst">Soru</label>
+                            <input type="text" class="form-control" name="title" placeholder="Title">
+                            <label for="floatingFirst">Question</label>
                         </div>
 
                         <div class="input-group mb-3 d-none question-image">
                             <input type="file" class="form-control" name="imagePath">
-                            <label class="input-group-text" for="inputGroupFile02">Soru Resim</label>
+                            <label class="input-group-text" for="inputGroupFile02">Question Image</label>
                         </div>
 
                         <div class="mb-3">
-                            <label class="mb-2">Açıklama</label>
+                            <label class="mb-2">Description</label>
                             <textarea id="ckeditor" name="description"></textarea>
                             <input type="hidden" name="ck_editor" value="1">
                         </div>
@@ -53,20 +53,20 @@
                                     <option value="{{$type->id}}">{{$type->title}}</option>
                                 @endforeach
                             </select>
-                            <label for="floatingSelect">Soru Tipi</label>
+                            <label for="floatingSelect">Question Type</label>
                         </div>
 
                         <div class="form-check form-switch">
                             <input class="form-check-input " type="checkbox" name="choiceImage" id="switchImageShow">
-                            <label class="form-check-label" for="switchImageShow">Cevap Resim</label>
+                            <label class="form-check-label" for="switchImageShow">Choice Image</label>
                         </div>
 
                         <br>
 
                         <div class="row mb-3 text-choice">
                             <div class="form-floating ps-1 col-10">
-                                <input type="text" class="form-control " name="choice_text_1" placeholder="Cevap 01">
-                                <label class="" for="floatingFirst">Cevap 01</label>
+                                <input type="text" class="form-control " name="choice_text_1" placeholder="Answer 01">
+                                <label class="" for="floatingFirst">Answer 01</label>
                             </div>
                             <div class="col-1">
                                 <input class="form-check-input p-3" type="checkbox"
@@ -75,14 +75,14 @@
                                        name="correct_choice"
                                        value="1"
                                        onclick="correctChoice(this)"
-                                       title="Doğru Cevabı Seçin">
+                                       title="Select Correct Answer">
                             </div>
                         </div>
 
                         <div class="row mb-3 text-choice">
                             <div class="form-floating ps-1 col-10">
-                                <input type="text" class="form-control " name="choice_text_2" placeholder="Cevap 02">
-                                <label class="" for="floatingFirst">Cevap 02</label>
+                                <input type="text" class="form-control " name="choice_text_2" placeholder="Answer 02">
+                                <label class="" for="floatingFirst">Answer 02</label>
                             </div>
                             <div class="col-1">
                                 <input class="form-check-input p-3" type="checkbox"
@@ -91,14 +91,14 @@
                                        name="correct_choice"
                                        value="2"
                                        onclick="correctChoice(this)"
-                                       title="Doğru Cevabı Seçin">
+                                       title="Select Correct Answer">
                             </div>
                         </div>
 
                         <div class="row mb-3 text-choice">
                             <div class="form-floating ps-1 col-10">
-                                <input type="text" class="form-control " name="choice_text_3" placeholder="Cevap 0">
-                                <label class="" for="floatingFirst">Cevap 03</label>
+                                <input type="text" class="form-control " name="choice_text_3" placeholder="Answer 03">
+                                <label class="" for="floatingFirst">Answer 03</label>
                             </div>
                             <div class="col-1">
                                 <input class="form-check-input p-3" type="checkbox"
@@ -107,14 +107,14 @@
                                        name="correct_choice"
                                        value="3"
                                        onclick="correctChoice(this)"
-                                       title="Doğru Cevabı Seçin">
+                                       title="Select Correct Answer">
                             </div>
                         </div>
 
                         <div class="row mb-3 text-choice">
                             <div class="form-floating ps-1 col-10">
-                                <input type="text" class="form-control " name="choice_text_4" placeholder="Cevap 04">
-                                <label class="" for="floatingFirst">Cevap 04</label>
+                                <input type="text" class="form-control " name="choice_text_4" placeholder="Answer 04">
+                                <label class="" for="floatingFirst">Answer 04</label>
                             </div>
                             <div class="col-1">
                                 <input class="form-check-input p-3" type="checkbox"
@@ -123,7 +123,7 @@
                                        name="correct_choice"
                                        value="4"
                                        onclick="correctChoice(this)"
-                                       title="Doğru Cevabı Seçin">
+                                       title="Select Correct Answer">
                             </div>
                         </div>
 
@@ -138,7 +138,7 @@
                                        value="1"
                                        onclick="correctChoice(this)"
                                        data-bs-toggle="tooltip" data-bs-placement="top"
-                                       title="Doğru Cevabı Seçin">
+                                       title="Select Correct Answer">
                             </div>
                         </div>
 
@@ -154,7 +154,7 @@
                                        value="2"
                                        onclick="correctChoice(this)"
                                        data-bs-toggle="tooltip" data-bs-placement="top"
-                                       title="Doğru Cevabı Seçin">
+                                       title="Select Correct Answer">
                             </div>
                         </div>
 
@@ -169,7 +169,7 @@
                                        value="3"
                                        onclick="correctChoice(this)"
                                        data-bs-toggle="tooltip" data-bs-placement="top"
-                                       title="Doğru Cevabı Seçin">
+                                       title="Select Correct Answer">
                             </div>
                         </div>
 
@@ -184,14 +184,14 @@
                                        value="4"
                                        onclick="correctChoice(this)"
                                        data-bs-toggle="tooltip" data-bs-placement="top"
-                                       title="Doğru Cevabı Seçin">
+                                       title="Select Correct Answer">
                             </div>
                         </div>
 
                         <div class="mt-3">
-                            <button type="button" onclick="createAndUpdateButton()" class="btn btn-success">Kaydet
+                            <button type="button" onclick="createAndUpdateButton()" class="btn btn-success">Save
                             </button>
-                            <a href="{{route('admin.question.index')}}" class="btn btn-danger">İptal</a>
+                            <a href="{{route('admin.question.index')}}" class="btn btn-danger">Cancel</a>
                         </div>
 
                     </form>
@@ -203,7 +203,7 @@
 @endsection
 
 @section('meta')
-    <title>Soru Ekle</title>
+    <title>Add Question</title>
 @endsection
 
 @section('css')

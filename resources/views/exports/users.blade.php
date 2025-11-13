@@ -1,14 +1,14 @@
 <table>
     <thead>
     <tr>
-        <th>Tc</th>
-        <th>Ad</th>
-        <th>Soyad</th>
-        <th>Telefon</th>
+        <th>ID Number</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Phone</th>
         <th>Email</th>
-        <th>Durum</th>
-        <th>Sınıf</th>
-        <th>Adres</th>
+        <th>Status</th>
+        <th>Class</th>
+        <th>Address</th>
     </tr>
     </thead>
     <tbody>
@@ -19,7 +19,7 @@
             <td>{{ $user->surname }}</td>
             <td>{{ $user->info->phone }}</td>
             <td>{{ $user->email }}</td>
-            <td>{{ $user->info->status == 1 ? 'Aktif' : 'Pasif' }}</td>
+            <td>{{ $user->info->status == 1 ? 'Active' : 'Inactive' }}</td>
             <td>{{ $user->info->group->title }}</td>
             <td>{{ $user->info->address }}</td>
 

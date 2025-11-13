@@ -15,7 +15,7 @@
                         <div class="form-floating col-md-4">
                             <select class="form-select" id="floatingSelect1" name="period"
                                     onchange="this.form.submit()">
-                                <option value="0">Hepsi</option>
+                                <option value="0">All</option>
                                 @foreach($periods as $period)
                                     <option
                                         value="{{$period->id}}" {{$period->id == request()->get('period') ? 'selected' : null}}>{{$period->title}}</option>
@@ -25,7 +25,7 @@
                         </div>
                         <div class="form-floating col-md-4">
                             <select class="form-select" id="floatingSelect2" name="month" onchange="this.form.submit()">
-                                <option value="0">Hepsi</option>
+                                <option value="0">All</option>
                                 @foreach($months as $month)
                                     <option
                                         value="{{$month->id}}" {{$month->id == request()->get('month') ? 'selected' : null}}>{{$month->title}}</option>
@@ -36,7 +36,7 @@
                         <div class="form-floating col-md-4">
                             <select class="form-select" id="floatingSelect3"
                                     id="floatingSelect3" name="group" onchange="this.form.submit()">>
-                                <option value="0">Hepsi</option>
+                                <option value="0">All</option>
                                 @foreach($groups as $group)
                                     <option
                                         value="{{$group->id}}" {{$group->id == request()->get('group') ? 'selected' : null}}>{{$group->title}}</option>
@@ -52,7 +52,7 @@
                            class="btn btn-success">{{__('manager/menu.new_trainee')}}</a>
                         <a href="{{route('manager.user.excel-export')}}"
                            class="btn btn-warning">{{__('manager/user/trainee-list.list_print')}}</a>
-                        <button class="btn btn-danger" onclick="multipleDeleteButton(`${{route('manager.user.multiple.destroy')}}`)">Seçilenleri Sil</button>
+                        <button class="btn btn-danger" onclick="multipleDeleteButton(`${{route('manager.user.multiple.destroy')}}`)">Delete Selected</button>
                     </h4>
                 </div>
                 <div class="col-12 col-lg-12 mt-3 overflow-auto">
@@ -78,7 +78,7 @@
                                 <td>{{$user->period->title}}</td>
                                 <td>{{$user->month->title}}</td>
                                 <td>{{$user->group->title}}</td>
-                                <td>{{$user->status == 0 ? 'Pasif' : 'Aktif'}}</td>
+                                <td>{{$user->status == 0 ? 'Inactive' : 'Active'}}</td>
                                 <td>
                                     <a href="{{route('manager.user.edit',$user->userId)}}">
                                         <i class="bi bi-pen text-dark"></i>

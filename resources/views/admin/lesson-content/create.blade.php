@@ -6,7 +6,7 @@
         <section class="content">
             <figure>
                 <blockquote class="blockquote">
-                    <h2>Ders Oluştur</h2>
+                    <h2>Create Lesson</h2>
                 </blockquote>
             </figure>
             <div class="row">
@@ -16,32 +16,32 @@
 
                         <div class="form-floating mb-3">
                             <select class="form-select" name="languageId">
-                                <option disabled selected>Seçiniz</option>
+                                <option disabled selected>Select</option>
                                 @foreach($languages as $language)
                                     <option value="{{$language->id}}">{{$language->title}}</option>
                                 @endforeach
                             </select>
-                            <label for="floatingSelect">Dil</label>
+                            <label for="floatingSelect">Language</label>
                         </div>
 
                         <div class="input-group mb-3">
                             <input type="file" class="form-control" name="file">
-                            <label class="input-group-text" for="inputGroupFile02">Ses Dosyası</label>
+                            <label class="input-group-text" for="inputGroupFile02">Audio File</label>
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="title" placeholder="Başlık">
-                            <label for="floatingFirst">Başlık</label>
+                            <input type="text" class="form-control" name="title" placeholder="Title">
+                            <label for="floatingFirst">Title</label>
                         </div>
 
                         <div class="form-floating mb-3">
                             <select class="form-select" name="typeId">
-                                <option disabled selected>Seçiniz</option>
+                                <option disabled selected>Select</option>
                                 @foreach($types as $type)
                                     <option value="{{$type->id}}">{{$type->title}}</option>
                                 @endforeach
                             </select>
-                            <label for="floatingSelect">Kategori</label>
+                            <label for="floatingSelect">Category</label>
                         </div>
 
                         <textarea id="ckeditor" name="content"></textarea>
@@ -49,9 +49,9 @@
                         <input type="hidden" name="ck_editor" value="1">
 
                         <div class="mt-3">
-                            <button type="button" onclick="createAndUpdateButton()" class="btn btn-success">Kaydet
+                            <button type="button" onclick="createAndUpdateButton()" class="btn btn-success">Save
                             </button>
-                            <a href="{{route('admin.lesson-content.index')}}" class="btn btn-danger">İptal</a>
+                            <a href="{{route('admin.lesson-content.index')}}" class="btn btn-danger">Cancel</a>
                         </div>
 
                     </form>
@@ -63,7 +63,7 @@
 @endsection
 
 @section('meta')
-    <title>Ders Oluştur</title>
+    <title>Create Lesson</title>
 @endsection
 
 @section('css')

@@ -6,7 +6,7 @@
         <section class="content">
             <figure>
                 <blockquote class="blockquote">
-                    <h2>Şirket Güncelle</h2>
+                    <h2>Update Company</h2>
                 </blockquote>
             </figure>
             <div class="row">
@@ -17,9 +17,9 @@
                         <div class="row">
                             <div class="col-md-6 col-sm-12">
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" name="title" placeholder="Şirket Adı"
+                                    <input type="text" class="form-control" name="title" placeholder="Company Name"
                                            value="{{$company->title}}">
-                                    <label for="floatingFirst">Şirket Adı</label>
+                                    <label for="floatingFirst">Company Name</label>
                                 </div>
 
                                 <div class="form-floating mb-3">
@@ -30,8 +30,8 @@
 
                                 <div class="form-floating mb-3">
                                     <input type="text" class="form-control" name="tax_no" maxlength="11"
-                                           placeholder="Vergi No" value="{{$company->info->tax_no}}">
-                                    <label for="floatingFirst">Vergi No</label>
+                                           placeholder="Tax Number" value="{{$company->info->tax_no}}">
+                                    <label for="floatingFirst">Tax Number</label>
                                 </div>
 
                                 <div class="form-floating mb-3">
@@ -41,27 +41,27 @@
                                 </div>
 
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" name="website_url" placeholder="Web Site"
+                                    <input type="text" class="form-control" name="website_url" placeholder="Website"
                                            value="{{$company->info->website_url}}">
-                                    <label for="floatingFirst">Web Site</label>
+                                    <label for="floatingFirst">Website</label>
                                 </div>
 
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" name="phone" placeholder="Telefon"
+                                    <input type="text" class="form-control" name="phone" placeholder="Phone"
                                            value="{{$company->info->phone}}">
-                                    <label for="floatingFirst">Telefon</label>
+                                    <label for="floatingFirst">Phone</label>
                                 </div>
 
                                 <div class="form-floating mb-3">
                                     <select class="form-select" onchange="countryChange()" id="country"
                                             name="countryId">
-                                        <option disabled selected>Seçiniz</option>
+                                        <option disabled selected>Select</option>
                                         @foreach($countries as $country)
                                             <option
                                                 value="{{$country->id}}" {{$company->info->countryId == $country->id ? 'selected' : null}}>{{$country->title}}</option>
                                         @endforeach
                                     </select>
-                                    <label for="floatingSelect">Ülke</label>
+                                    <label for="floatingSelect">Country</label>
                                 </div>
                             </div>
 
@@ -74,7 +74,7 @@
                                                 value="{{$city->id}}" {{$company->info->cityId == $city->id ? 'selected' : null}}>{{$city->title}}</option>
                                         @endforeach
                                     </select>
-                                    <label for="floatingSelect">İl</label>
+                                    <label for="floatingSelect">Province</label>
                                 </div>
 
                                 <div class="form-floating mb-3">
@@ -84,43 +84,43 @@
                                                 value="{{$state->id}}" {{$company->info->stateId == $state->id ? 'selected' : null}}>{{$state->title}}</option>
                                         @endforeach
                                     </select>
-                                    <label for="floatingSelect">İlçe</label>
+                                    <label for="floatingSelect">District</label>
                                 </div>
 
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" name="address" placeholder="Adres"
+                                    <input type="text" class="form-control" name="address" placeholder="Address"
                                            value="{{$company->info->address}}">
-                                    <label for="floatingFirst">Adres</label>
+                                    <label for="floatingFirst">Address</label>
                                 </div>
 
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" name="zip_code" placeholder="Posta Kodu"
+                                    <input type="text" class="form-control" name="zip_code" placeholder="Postal Code"
                                            value="{{$company->info->zip_code}}">
-                                    <label for="floatingFirst">Posta Kodu</label>
+                                    <label for="floatingFirst">Postal Code</label>
                                 </div>
 
                                 <div class="form-floating mb-3">
                                     <select class="form-select" name="planId">
-                                        <option disabled selected>Seçiniz</option>
+                                        <option disabled selected>Select</option>
                                         @foreach($paymentPlans as $paymentPlan)
                                             <option
                                                 value="{{$paymentPlan->id}}" {{$company->info->planId == $paymentPlan->id ? 'selected' : null}}>{{$paymentPlan->description}}</option>
                                         @endforeach
                                     </select>
-                                    <label for="floatingSelect">Ödeme Planı</label>
+                                    <label for="floatingSelect">Payment Plan</label>
                                 </div>
 
                                 <div class="form-floating mb-3">
                                     <input type="date" class="form-control" name="start_date"
-                                           placeholder="Başlangıç Tarihi" value="{{$invoice->start_date}}">
-                                    <label for="floatingFirst">Başlangıç Tarihi</label>
+                                           placeholder="Start Date" value="{{$invoice->start_date}}">
+                                    <label for="floatingFirst">Start Date</label>
                                 </div>
 
                                 <div class="form-floating mb-3">
                                     <input type="date" class="form-control" name="end_date" disabled
-                                           placeholder="Bitiş Tarihi"
+                                           placeholder="End Date"
                                            value="{{$invoice->end_date}}">
-                                    <label for="floatingFirst">Bitiş Tarihi</label>
+                                    <label for="floatingFirst">End Date</label>
                                 </div>
                             </div>
                             <div class="input-group mb-3">
@@ -129,9 +129,9 @@
                             </div>
                         </div>
                         <div class="mt-3">
-                            <button type="button" onclick="createAndUpdateButton()" class="btn btn-success">Kaydet
+                            <button type="button" onclick="createAndUpdateButton()" class="btn btn-success">Save
                             </button>
-                            <a href="{{route('admin.company.index')}}" class="btn btn-danger">İptal</a>
+                            <a href="{{route('admin.company.index')}}" class="btn btn-danger">Cancel</a>
                         </div>
 
                     </form>
@@ -143,7 +143,7 @@
 @endsection
 
 @section('meta')
-    <title>Şirket Düzenle</title>
+    <title>Edit Company</title>
 @endsection
 
 @section('css')
