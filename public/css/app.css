@@ -1501,7 +1501,7 @@ section .container .row .base:hover {
     transition: margin 0.25s ease-out;
 }
 #sidebar-wrapper .sidebar-heading {
-    padding: 1.2rem 0rem;
+    padding: 0.875rem 1.25rem;
     font-size: 1.2rem;
 }
 #sidebar-wrapper .list-group {
@@ -3432,10 +3432,10 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
     background-color: #dc3545 !important;
 }
 .bg-light {
-    background-color: #15284b !important;
+    background-color: #f8f9fa !important;
 }
 .bg-dark {
-    background-color: #212529 !important;
+    background-color: #15284b !important;
 }
 .bg-body {
     background-color: #fff !important;

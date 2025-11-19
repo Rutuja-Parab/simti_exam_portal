@@ -1,4 +1,4 @@
-<nav class="navbar-top navbar navbar-expand-lg navbar-light bg-light border-bottom d-none d-md-block">
+<nav class="navbar-top navbar navbar-expand-lg navbar-light bg-dark border-bottom d-none d-md-block">
     <div class="container-fluid">
 
         <a class="navbar-logo-link" href="{{route('user.dashboard')}}">
