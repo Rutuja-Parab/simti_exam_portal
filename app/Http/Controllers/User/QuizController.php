@@ -33,7 +33,6 @@ class QuizController extends Controller
     public function getClassExam()
     {
         session(['class_exam' => request()->get('class')]);
-
         return view('user.quiz');
     }
 
@@ -67,7 +66,7 @@ class QuizController extends Controller
         $data = [
             'user' => [
                 'id' => auth()->id(),
-                'name_surname' => auth()->user()->name.' '.auth()->user()->surname,
+                'name_surname' => auth()->user()->name . ' ' . auth()->user()->surname,
                 'email' => auth()->user()->email,
             ],
             'test' => $test->id,

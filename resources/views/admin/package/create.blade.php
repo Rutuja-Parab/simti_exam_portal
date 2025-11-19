@@ -1,7 +1,6 @@
 @extends('admin.layout.app')
 
 @section('content')
-
     <div class="container-fluid">
         <section class="content">
             <figure>
@@ -20,22 +19,21 @@
                         </div>
 
                         <div class="form-floating mb-3">
-                            <textarea class="form-control" name="description" placeholder="Package Description"
-                                      id="floatingTextarea2" style="height: 100px"></textarea>
+                            <textarea class="form-control" name="description" placeholder="Package Description" id="floatingTextarea2"
+                                style="height: 100px"></textarea>
                             <label for="floatingTextarea2">Package Description</label>
                         </div>
 
                         <div class="form-floating mb-3">
                             <input type="number" class="form-control" name="price" id="floatingPrice">
-                            <label for="floatingPrice">Fiyat</label>
+                            <label for="floatingPrice">Price</label>
                         </div>
 
                         <div class="form-floating mb-3">
                             <select class="form-select" name="planId">
                                 <option disabled selected>Select</option>
-                                @foreach($paymentPlans as $paymentPlan)
-                                    <option
-                                        value="{{$paymentPlan->id}}">{{$paymentPlan->description}}</option>
+                                @foreach ($paymentPlans as $paymentPlan)
+                                    <option value="{{ $paymentPlan->id }}">{{ $paymentPlan->description }}</option>
                                 @endforeach
                             </select>
                             <label for="floatingSelect">Payment Plan</label>
@@ -44,7 +42,7 @@
                         <div class="mt-3">
                             <button type="button" onclick="createAndUpdateButton()" class="btn btn-success">Save
                             </button>
-                            <a href="{{route('admin.package.index')}}" class="btn btn-danger">Cancel</a>
+                            <a href="{{ route('admin.package.index') }}" class="btn btn-danger">Cancel</a>
                         </div>
 
                     </form>
@@ -52,7 +50,6 @@
             </div>
         </section>
     </div>
-
 @endsection
 
 @section('meta')
@@ -65,8 +62,8 @@
 
 @section('js')
     <script>
-        const actionUrl = '{{route('admin.package.store')}}';
-        const backUrl = '{{route('admin.package.index')}}';
+        const actionUrl = '{{ route('admin.package.store') }}';
+        const backUrl = '{{ route('admin.package.index') }}';
     </script>
     @include('partials.script')
 @endsection

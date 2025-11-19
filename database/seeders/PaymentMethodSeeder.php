@@ -14,16 +14,16 @@ class PaymentMethodSeeder extends Seeder
     {
         DB::table('payment_methods')->insert([
             [
-                'title' => 'Online Ödeme',
+                'title' => 'Online Payment',
                 'code' => 'online',
-                'description' => 'online',
+                'description' => 'Payment made through an online gateway or credit/debit card.',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'title' => 'Banka Havalesi ile Ödeme',
+                'title' => 'Bank Transfer',
                 'code' => 'wire_transfer',
-                'description' => 'wire_transfer',
+                'description' => 'Payment made via bank transfer or deposit.',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],

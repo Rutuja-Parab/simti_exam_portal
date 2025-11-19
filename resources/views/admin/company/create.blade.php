@@ -1,7 +1,6 @@
 @extends('admin.layout.app')
 
 @section('content')
-
     <div class="container-fluid">
         <section class="content">
             <figure>
@@ -28,7 +27,7 @@
 
                                 <div class="form-floating mb-3">
                                     <input type="text" class="form-control" name="tax_no" maxlength="11"
-                                           placeholder="Tax Number">
+                                        placeholder="Tax Number">
                                     <label for="floatingFirst">Tax Number</label>
                                 </div>
 
@@ -48,11 +47,10 @@
                                 </div>
 
                                 <div class="form-floating mb-3">
-                                    <select class="form-select" onchange="countryChange()" id="country"
-                                            name="countryId">
+                                    <select class="form-select" onchange="countryChange()" id="country" name="countryId">
                                         <option disabled selected>Select</option>
-                                        @foreach($countries as $country)
-                                            <option value="{{$country->id}}">{{$country->title}}</option>
+                                        @foreach ($countries as $country)
+                                            <option value="{{ $country->id }}">{{ $country->title }}</option>
                                         @endforeach
                                     </select>
                                     <label for="floatingSelect">Country</label>
@@ -89,16 +87,16 @@
                                 <div class="form-floating mb-3">
                                     <select class="form-select" name="planId">
                                         <option disabled selected>Select</option>
-                                        @foreach($paymentPlans as $paymentPlan)
-                                            <option value="{{$paymentPlan->id}}">{{$paymentPlan->description}}</option>
+
+                                        @foreach ($paymentPlans as $paymentPlan)
+                                            <option value="{{ $paymentPlan->id }}">{{ $paymentPlan->description }}</option>
                                         @endforeach
                                     </select>
                                     <label for="floatingSelect">Payment Plan</label>
                                 </div>
 
                                 <div class="form-floating mb-3">
-                                    <input type="date" class="form-control" name="start_date"
-                                           placeholder="Start Date">
+                                    <input type="date" class="form-control" name="start_date" placeholder="Start Date">
                                     <label for="floatingFirst">Start Date</label>
                                 </div>
 
@@ -112,7 +110,7 @@
                         <div class="mt-3">
                             <button type="button" onclick="createAndUpdateButton()" class="btn btn-success">Save
                             </button>
-                            <a href="{{route('admin.company.index')}}" class="btn btn-danger">Cancel</a>
+                            <a href="{{ route('admin.company.index') }}" class="btn btn-danger">Cancel</a>
                         </div>
 
                     </form>
@@ -120,7 +118,6 @@
             </div>
         </section>
     </div>
-
 @endsection
 
 @section('meta')
@@ -133,14 +130,14 @@
 
 @section('js')
     <script>
-        const actionUrl = '{{route('admin.company.store')}}';
-        const backUrl = '{{route('admin.company.index')}}';
+        const actionUrl = '{{ route('admin.company.store') }}';
+        const backUrl = '{{ route('admin.company.index') }}';
     </script>
 
     <script>
         function countryChange() {
             const countryId = document.getElementById("country").value;
-            const cityUrl = "{{route('city')}}/" + countryId;
+            const cityUrl = "{{ route('city') }}/" + countryId;
             axios.get(cityUrl).then(res => {
                 var option = "";
                 Object.keys(res.data).forEach(key => {
@@ -152,7 +149,7 @@
 
         function cityChange() {
             const cityId = document.getElementById("city").value;
-            const stateUrl = "{{route('state')}}/" + cityId;
+            const stateUrl = "{{ route('state') }}/" + cityId;
             axios.get(stateUrl).then(res => {
                 var option = "";
                 Object.keys(res.data).forEach(key => {
@@ -164,4 +161,3 @@
     </script>
     @include('partials.script')
 @endsection
-

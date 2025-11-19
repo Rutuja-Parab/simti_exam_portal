@@ -6,25 +6,25 @@
         <section class="content">
             <figure>
                 <blockquote class="blockquote">
-                    <h2>Kullanıcı Listesi</h2>
+                    <h2>User List</h2>
                 </blockquote>
             </figure>
             <div class="row">
                 <div class="col-12 col-lg-12">
-                    <h4><a href="<?php echo e(route('admin.manager-user.create')); ?>" class="btn btn-success">Kullanıcı Oluştur</a>
+                    <h4><a href="<?php echo e(route('admin.manager-user.create')); ?>" class="btn btn-success">Create User</a>
                     </h4>
                 </div>
                 <div class="col-12 col-lg-12 mt-3 overflow-auto">
                     <table id="data-table" class="table table-striped" style="width:100%">
                         <thead>
                         <tr>
-                            <th>Adı Soyadı</th>
-                            <th>TCKN</th>
-                            <th>Telefon</th>
-                            <th>Şirket</th>
-                            <th>Dil</th>
-                            <th>Durum</th>
-                            <th>İşlemler</th>
+                            <th>Name Surname</th>
+                            <th>ID Number</th>
+                            <th>Phone</th>
+                            <th>Company</th>
+                            <th>Language</th>
+                            <th>Status</th>
+                            <th>Actions</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -35,7 +35,7 @@
                                 <td><?php echo e($user->phone); ?></td>
                                 <td><?php echo e($user->company->title); ?></td>
                                 <td><?php echo e($user->language->title); ?></td>
-                                <td class="<?php echo e($user->status == 1 ? 'text-success' : 'text-danger'); ?> fw-bold"><?php echo e($user->status == 1 ? 'Aktif' : 'Pasif'); ?></td>
+                                <td class="<?php echo e($user->status == 1 ? 'text-success' : 'text-danger'); ?> fw-bold"><?php echo e($user->status == 1 ? 'Active' : 'Inactive'); ?></td>
                                 <td>
                                     <a href="<?php echo e(route('admin.manager-user.edit',$user->userId)); ?>">
                                         <i class="bi bi-pen text-dark"></i>
@@ -57,7 +57,7 @@
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('meta'); ?>
-    <title>Kullanıcı Listesi</title>
+    <title>User List</title>
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('css'); ?>

@@ -7,20 +7,22 @@
             <h1 class="topline">Sign In</h1>
             <br />
             <div class="input-field">
-                <input id="tc" type="text" placeholder="TCKN" class="@error('tc') is-invalid @enderror" name="tc" value="{{ old('tc') }}" required autocomplete="tc" autofocus maxlength="11">
-                @error('tc')
-                <span class="invalid-feedback" role="alert">
-                <strong>{{ $message }}</strong>
-            </span>
+                <input id="email" type="text" placeholder="Email ID" class="@error('email') is-invalid @enderror"
+                    name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                @error('email')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
                 @enderror
             </div>
 
             <div class="input-field">
-                <input id="password" type="password" placeholder="Password" class="@error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                <input id="password" type="password" placeholder="Password" class="@error('password') is-invalid @enderror"
+                    name="password" required autocomplete="current-password">
                 @error('password')
-                <span class="invalid-feedback" role="alert">
-                <strong>{{ $message }}</strong>
-            </span>
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
                 @enderror
             </div>
 
@@ -36,7 +38,8 @@
 
             <footer>
                 <p class="text-center mt-5">
-                    <a href="{{ route('static.page.privacy-policy') }}" class="text-decoration-none small" style="color: #909090" target="_blank">Privacy Policy - KVKK</a>
+                    <a href="{{ route('static.page.privacy-policy') }}" class="text-decoration-none small"
+                        style="color: #909090" target="_blank">Privacy Policy - KVKK</a>
                 </p>
             </footer>
         </div>

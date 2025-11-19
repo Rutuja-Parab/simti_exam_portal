@@ -72,7 +72,7 @@ class UserController extends Controller
     {
         try {
             $this->globalService->userStore($request, User::Normal);
-
+            
             return response(ResponseMessage::SuccessMessage());
         } catch (\Exception $ex) {
             return response(ResponseMessage::ErrorMessage());

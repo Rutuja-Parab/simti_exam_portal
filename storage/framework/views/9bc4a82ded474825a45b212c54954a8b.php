@@ -6,25 +6,25 @@
         <section class="content">
             <figure>
                 <blockquote class="blockquote">
-                    <h2>Şirketler</h2>
+                    <h2>Companies</h2>
                 </blockquote>
             </figure>
 
             <div class="row">
                 <div class="col-12 col-lg-12">
-                    <h4><a href="<?php echo e(route('admin.company.create')); ?>" class="btn btn-success">Şirket Oluştur</a></h4>
+                    <h4><a href="<?php echo e(route('admin.company.create')); ?>" class="btn btn-success">Create Company</a></h4>
                 </div>
                 <div class="col-12 col-lg-12 mt-3 overflow-auto">
                     <table id="data-table" class="table table-striped" style="width:100%">
                         <thead>
                         <tr>
-                            <th>İd</th>
-                            <th>Şirket Adı</th>
-                            <th>Kalan Gün</th>
-                            <th>Ödeme</th>
-                            <th>Durum</th>
-                            <th>Güncelleme Tarih</th>
-                            <th>İşlemler</th>
+                            <th>ID</th>
+                            <th>Company Name</th>
+                            <th>Remaining Days</th>
+                            <th>Payment</th>
+                            <th>Status</th>
+                            <th>Updated At</th>
+                            <th>Actions</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -33,8 +33,8 @@
                                 <td><?php echo e($company->id); ?></td>
                                 <td><?php echo e($company->title); ?></td>
                                 <td><?php echo e(invoiceDiffDate($company->id)); ?></td>
-                                <td class="<?php echo e($company->invoice->status == 1 ? 'text-success' : 'text-danger'); ?> fw-bold"><?php echo e($company->invoice->status == 1 ? 'Ödeme Alındı' : 'Ödeme Alınmadı'); ?></td>
-                                <td class="<?php echo e($company->status == 1 ? 'text-success' : 'text-danger'); ?> fw-bold"><?php echo e($company->status == 1 ? 'Aktif' : 'Pasif'); ?></td>
+                                <td class="<?php echo e($company->invoice->status == 1 ? 'text-success' : 'text-danger'); ?> fw-bold"><?php echo e($company->invoice->status == 1 ? 'Payment Received' : 'Payment Pending'); ?></td>
+                                <td class="<?php echo e($company->status == 1 ? 'text-success' : 'text-danger'); ?> fw-bold"><?php echo e($company->status == 1 ? 'Active' : 'Inactive'); ?></td>
                                 <td><?php echo e($company->updated_at); ?></td>
                                 <td>
                                     <a href="<?php echo e(route('admin.company.edit',$company->id)); ?>" class="me-2">
@@ -62,7 +62,7 @@
 
 <?php $__env->startSection('meta'); ?>
 
-    <title>Şirketler</title>
+    <title>Companies</title>
 
 <?php $__env->stopSection(); ?>
 

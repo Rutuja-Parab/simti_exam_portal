@@ -14,22 +14,42 @@ class QuestionTypeSeeder extends Seeder
     {
         DB::table('question_types')->insert([
             [
-                'title' => 'İlk Yardım',
+                'title' => 'Verbal Ability',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'title' => 'Trafik Çevre',
+                'title' => 'Analytical Ability',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'title' => 'Araç Tekniği',
+                'title' => 'Numerical Ability',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'title' => 'Trafik Adabı',
+                'title' => 'Electrical Engineering',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Computer Science',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Mechanical Engineering',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Civil Engineering',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Electronics and Communication',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],

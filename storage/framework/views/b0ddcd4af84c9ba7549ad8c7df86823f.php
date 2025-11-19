@@ -2,7 +2,7 @@
     <div class="container-fluid">
 
         <a class="navbar-logo-link" href="<?php echo e(route('admin.dashboard')); ?>">
-            <img class="sidebar-logo" src="<?php echo e(asset('images/laerx.png')); ?>" alt="logo">
+            
         </a>
 
         <div class="collapse navbar-collapse d-none d-sm-block" id="navbarSupportedContent">
@@ -14,10 +14,10 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link navbar-border" id="navbarDropdown" href="#" role="button"
-                       data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <div class="profile-info-icon-nav"><span><?php echo e(auth()->user()->name[0]); ?></span></div>
                         <span class="name">
-                            <?php echo e(auth()->user()->name .' '. auth()->user()->surname); ?>
+                            <?php echo e(auth()->user()->name . ' ' . auth()->user()->surname); ?>
 
                             <p class="role"><?php echo e(auth()->user()->type == 1 ? 'Administrator' : 'null'); ?></p>
                             <i class="bi bi-chevron-down sidebar-toggle-icon me-1"></i>
@@ -25,9 +25,9 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-end navbar-dropdown-open" aria-labelledby="navbarDropdown">
                         <span class="text-secondary ms-2">Version : <?php echo e(app()->version()); ?></span>
-                        <a class="dropdown-item" href="<?php echo e(route('admin.profile.edit')); ?>">Profil</a>
+                        <a class="dropdown-item" href="<?php echo e(route('admin.profile.edit')); ?>">Profile</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="<?php echo e(route('logout-user')); ?>">Çıkış Yap</a>
+                        <a class="dropdown-item" href="<?php echo e(route('logout-user')); ?>">Sign Out</a>
                     </div>
                 </li>
             </ul>

@@ -1,7 +1,6 @@
 @extends('admin.layout.app')
 
 @section('content')
-
     <div class="container-fluid">
         <section class="content">
             <figure>
@@ -16,7 +15,7 @@
 
                         <div class="form-floating mb-3">
                             <input type="number" class="form-control" name="month" placeholder="Ay">
-                            <label for="floatingFirst">Ay</label>
+                            <label for="floatingFirst">Count of Months</label>
                         </div>
 
                         <div class="form-floating mb-3">
@@ -27,7 +26,7 @@
                         <div class="mt-3">
                             <button type="button" onclick="createAndUpdateButton()" class="btn btn-success">Save
                             </button>
-                            <a href="{{route('admin.payment-plan.index')}}" class="btn btn-danger">Cancel</a>
+                            <a href="{{ route('admin.payment-plan.index') }}" class="btn btn-danger">Cancel</a>
                         </div>
 
                     </form>
@@ -35,7 +34,6 @@
             </div>
         </section>
     </div>
-
 @endsection
 
 @section('meta')
@@ -48,8 +46,8 @@
 
 @section('js')
     <script>
-        const actionUrl = '{{route('admin.payment-plan.store')}}';
-        const backUrl = '{{route('admin.payment-plan.index')}}';
+        const actionUrl = '{{ route('admin.payment-plan.store') }}';
+        const backUrl = '{{ route('admin.payment-plan.index') }}';
     </script>
     @include('partials.script')
 @endsection

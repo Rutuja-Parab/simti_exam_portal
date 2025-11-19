@@ -9,70 +9,70 @@
     <ul class="dropdown-menu sidebar-dropdown-open d-md-none d-lg-none d-xl-none d-xxl-none"
         aria-labelledby="dropdownMenuButton1">
         <span class="text-secondary ms-2">Version : v<?php echo e(app()->version()); ?></span><br>
-        <span class="text-secondary ms-2 fw-bold">HESAP</span>
-        <li><a class="dropdown-item" href="<?php echo e(route('admin.profile.edit')); ?>">Hesabım</a></li>
-        <li><a class="dropdown-item" href="<?php echo e(route('logout-user')); ?>">Çıkış Yap</a></li>
+        <span class="text-secondary ms-2 fw-bold">ACCOUNT</span>
+        <li><a class="dropdown-item" href="<?php echo e(route('admin.profile.edit')); ?>">My Account</a></li>
+        <li><a class="dropdown-item" href="<?php echo e(route('logout-user')); ?>">Sign Out</a></li>
     </ul>
 
     <a class="list-group-item list-group-item-action d-none d-md-block <?php echo e(request()->is('admin/dashboard') ? 'active' : ''); ?>"
        href="<?php echo e(route('admin.dashboard')); ?>">
         <i class="bi bi-house fs-4"></i>
-        <span class="sidebar-menu-text">Ana Sayfa</span>
+        <span class="sidebar-menu-text">Home</span>
     </a>
 
     <a class="list-group-item list-group-item-action d-none d-md-block <?php echo e(request()->is('admin/company*') ? 'active' : ''); ?>"
        href="<?php echo e(route('admin.company.index')); ?>">
         <i class="bi bi-building fs-4"></i>
-        <span class="sidebar-menu-text">Şirketler</span>
+        <span class="sidebar-menu-text">Companies</span>
     </a>
 
     <a class="list-group-item list-group-item-action d-none d-md-block <?php echo e(request()->is('admin/manager-user*') ? 'active' : ''); ?>"
        href="<?php echo e(route('admin.manager-user.index')); ?>">
         <i class="bi bi-people fs-4"></i>
-        <span class="sidebar-menu-text">Kullanıcılar</span>
+        <span class="sidebar-menu-text">Users</span>
     </a>
 
     <a class="list-group-item list-group-item-action <?php echo e(request()->is('admin/question*', 'admin/type*', 'admin/lesson-content*') ? 'active' : ''); ?>"
        type="button" id="dropdownMenuButton4" data-bs-toggle="dropdown" aria-expanded="false">
         <i class="bi bi-question-circle fs-4"></i>
-        <span class="sidebar-menu-text">Soru Bankası</span>
+        <span class="sidebar-menu-text">Question Bank</span>
         <i class="bi bi-chevron-down sidebar-toggle-icon me-1"></i>
     </a>
 
     <ul class="dropdown-menu sidebar-dropdown-open" aria-labelledby="dropdownMenuButton4">
         <span class="text-secondary ms-2">BANK</span>
-        <li><a class="dropdown-item" href="<?php echo e(route('admin.lesson-content.index')); ?>">Dersler</a></li>
-        <li><a class="dropdown-item" href="<?php echo e(route('admin.question.index')); ?>">Sorular</a></li>
-        <li><a class="dropdown-item" href="<?php echo e(route('admin.type.index')); ?>">Soru Kategorileri</a></li>
+        <li><a class="dropdown-item" href="<?php echo e(route('admin.lesson-content.index')); ?>">Lessons</a></li>
+        <li><a class="dropdown-item" href="<?php echo e(route('admin.question.index')); ?>">Questions</a></li>
+        <li><a class="dropdown-item" href="<?php echo e(route('admin.type.index')); ?>">Question Categories</a></li>
     </ul>
 
     <a class="list-group-item list-group-item-action <?php echo e(request()->is('admin/coupon*', 'admin/package*', 'admin/payment-plan*') ? 'active' : ''); ?>"
        type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false">
         <i class="bi bi-megaphone fs-4"></i>
-        <span class="sidebar-menu-text">Pazarlama</span>
+        <span class="sidebar-menu-text">Marketing</span>
         <i class="bi bi-chevron-down sidebar-toggle-icon me-1"></i>
     </a>
 
     <ul class="dropdown-menu sidebar-dropdown-open" aria-labelledby="dropdownMenuButton3">
         <span class="text-secondary ms-2">MARKETING</span>
-        <li><a class="dropdown-item" href="<?php echo e(route('admin.payment-plan.index')); ?>">Ödeme Planları</a></li>
-        <li><a class="dropdown-item" href="<?php echo e(route('admin.package.index')); ?>">Paketler</a></li>
-        <li><a class="dropdown-item" href="<?php echo e(route('admin.coupon.index')); ?>">Kuponlar</a></li>
+        <li><a class="dropdown-item" href="<?php echo e(route('admin.payment-plan.index')); ?>">Payment Plans</a></li>
+        <li><a class="dropdown-item" href="<?php echo e(route('admin.package.index')); ?>">Packages</a></li>
+        <li><a class="dropdown-item" href="<?php echo e(route('admin.coupon.index')); ?>">Coupons</a></li>
     </ul>
 
     <a class="list-group-item list-group-item-action <?php echo e(request()->is('admin/language*', 'admin/group*', 'admin/period*', 'admin/car-type*') ? 'active' : ''); ?>"
        type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
         <i class="bi bi-gear fs-4"></i>
-        <span class="sidebar-menu-text">Sistem Ayarları</span>
+        <span class="sidebar-menu-text">System Settings</span>
         <i class="bi bi-chevron-down sidebar-toggle-icon me-1"></i>
     </a>
 
     <ul class="dropdown-menu sidebar-dropdown-open" aria-labelledby="dropdownMenuButton2">
         <span class="text-secondary ms-2">SETTINGS</span>
-        <li><a class="dropdown-item" href="<?php echo e(route('admin.language.index')); ?>">Dil Seçenekleri</a></li>
-        <li><a class="dropdown-item" href="<?php echo e(route('admin.group.index')); ?>">Ehliyet Grupları</a></li>
-        <li><a class="dropdown-item" href="<?php echo e(route('admin.period.index')); ?>">Dönemler</a></li>
-        <li><a class="dropdown-item" href="<?php echo e(route('admin.car-type.index')); ?>">Araç Türleri</a></li>
+        <li><a class="dropdown-item" href="<?php echo e(route('admin.language.index')); ?>">Language Options</a></li>
+        <li><a class="dropdown-item" href="<?php echo e(route('admin.group.index')); ?>">License Groups</a></li>
+        <li><a class="dropdown-item" href="<?php echo e(route('admin.period.index')); ?>">Periods</a></li>
+        <li><a class="dropdown-item" href="<?php echo e(route('admin.car-type.index')); ?>">Vehicle Types</a></li>
     </ul>
 
 

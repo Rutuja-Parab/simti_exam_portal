@@ -38,7 +38,7 @@ class GlobalService
             $user->type = $type;
             $user->save();
             self::userInfoStore($request, $user->id);
-            $type == User::Manager ? $this->sendPortalService->subscribeUserStore($request) : null;
+            // $type == User::Manager ? $this->sendPortalService->subscribeUserStore($request) : null;
         });
     }
 
