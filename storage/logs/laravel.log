@@ -64,3 +64,8 @@
 #50 C:\\xampp\\htdocs\\simti\\server.php(19): require_once('...')
 #51 {main}
 "} 
+[2025-11-19 06:05:31] local.ERROR: Maximum execution time of 30 seconds exceeded [{"file":"C:\\xampp\\htdocs\\simti\\vendor\\laravel\\framework\\src\\Illuminate\\Contracts\\Cookie\\QueueingFactory.php","line":5,"code":0}] 
+[2025-11-19 06:05:33] local.ERROR: Maximum execution time of 30 seconds exceeded {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Maximum execution time of 30 seconds exceeded at C:\\xampp\\htdocs\\simti\\vendor\\laravel\\framework\\src\\Illuminate\\Contracts\\Cookie\\QueueingFactory.php:5)
+[stacktrace]
+#0 {main}
+"} 
